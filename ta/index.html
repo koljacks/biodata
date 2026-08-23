@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<title>Marriage Biodata Format in Tamil — free maker with photo</title>
+<meta name="description" content="Make a marriage biodata in Tamil (தமிழ்) free. Printable A4 with photo, ready in minutes. Nothing is uploaded — it all runs in your browser.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F6F7F3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123A34'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23D08A1E'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Biodata">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;600&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Site palette: deep pine green + marigold amber on a cool ivory.
+   Deliberately not maroon-and-gold — that is what every other biodata site
+   uses, and looking like them is the one thing a new site cannot afford. */
+:root{
+  --paper:#F6F7F3; --card:#FFFFFF; --ink:#16211D; --muted:#5C6B63;
+  --line:#DDE4DC; --plum:#123A34; --gold:#D08A1E; --gold-hi:#B0731A;
+  --soft:#E8EEE7; --r:14px;
+  --sh:0 1px 2px rgba(18,58,52,.05), 0 10px 30px -18px rgba(18,58,52,.32);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:Karla,system-ui,sans-serif;font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;letter-spacing:-.015em;color:var(--plum);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.hide{display:none!important}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(251,246,242,.92);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:14px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:9px;font-family:Fraunces,serif;font-weight:700;font-size:18px;color:var(--plum);text-decoration:none}
+.mark{width:28px;height:28px;border-radius:9px;background:var(--plum);color:var(--gold);display:grid;place-items:center;font-size:14px}
+.sp{flex:1}
+.btn{font-family:Karla,sans-serif;font-weight:600;font-size:14.5px;padding:10px 18px;border:0;border-radius:10px;cursor:pointer;background:var(--plum);color:#fff}
+.btn:hover{background:#4E2439}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.gold:hover{background:var(--gold-hi)}
+.btn.ghost{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost:hover{background:var(--soft)}
+.btn.sm{padding:7px 13px;font-size:13.5px}
+
+/* hero */
+.hero{padding:52px 0 34px;text-align:center}
+.hero h1{font-size:clamp(31px,5.4vw,50px);line-height:1.08;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{margin:0 auto;max-width:56ch;color:var(--muted);font-size:17px}
+.langbar{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:22px 0 6px}
+.lchip{border:0;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);padding:7px 14px;border-radius:99px;cursor:pointer;font-family:'Noto Sans',Karla,sans-serif;font-size:14px}
+.lchip:hover{box-shadow:inset 0 0 0 1px var(--gold)}
+.lchip[aria-pressed="true"]{background:var(--plum);color:#fff;box-shadow:none}
+.trust{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.tb{font-size:12.5px;color:var(--muted);background:var(--card);padding:5px 12px;border-radius:99px;box-shadow:inset 0 0 0 1px var(--line)}
+
+/* layout */
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:22px;padding:14px 0 70px;align-items:start}
+.panel{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:var(--sh);margin-bottom:16px}
+.panel h2{font-size:17px;margin-bottom:3px}
+.panel .sub{color:var(--muted);font-size:13.5px;margin:0 0 16px}
+.side{position:sticky;top:74px}
+
+/* steps */
+.steps{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.step{flex:1;min-width:74px;border:0;background:var(--soft);color:var(--muted);padding:9px 6px;border-radius:9px;cursor:pointer;font-family:Karla;font-size:12.5px;font-weight:600;text-align:center}
+.step[aria-current="true"]{background:var(--plum);color:#fff}
+.step .n{display:block;font-size:10px;opacity:.7}
+
+/* fields */
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px}
+.f{display:block}
+.f>span{display:block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-weight:600}
+.f>span[contenteditable]{cursor:text;border-bottom:1px dashed transparent}
+.f>span[contenteditable]:hover{border-bottom-color:var(--line)}
+input[type=text],input[type=file],select,textarea{width:100%;padding:10px 12px;border:0;border-radius:9px;background:var(--paper);color:var(--ink);font-family:'Noto Sans',Karla,sans-serif;font-size:14.5px;box-shadow:inset 0 0 0 1px var(--line)}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:inset 0 0 0 2px var(--gold)}
+textarea{min-height:80px;resize:vertical}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.hint{font-size:13px;color:var(--muted);margin:9px 0 0}
+.err{font-size:13px;color:#B3261E;margin:9px 0 0}
+
+/* theme swatches */
+.themes,.motifs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:9px}
+.motifs .sw{background:var(--paper);background-size:76%;background-position:center;background-repeat:no-repeat}
+.th{border:0;background:none;cursor:pointer;padding:0;border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.th[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--gold)}
+.th .sw{height:52px;display:grid;place-items:center;font-family:Fraunces,serif;font-size:17px}
+.th .nm{font-size:11px;padding:5px 3px;color:var(--muted)}
+
+/* preview */
+.pv{background:var(--soft);border-radius:var(--r);padding:12px;overflow:auto;box-shadow:var(--sh)}
+.pv-in{transform-origin:top left}
+.dl{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.fwrap .frow{display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.fwrap .frow > span[contenteditable]{flex:1;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fbtns{display:flex;gap:2px;opacity:.35;transition:opacity .15s}
+.fwrap:hover .fbtns,.fbtns:focus-within{opacity:1}
+.mini{border:0;background:var(--soft);color:var(--plum);width:22px;height:22px;border-radius:6px;cursor:pointer;font-size:11px;line-height:1;padding:0}
+.mini:hover:not(:disabled){background:var(--gold);color:#fff}
+.mini:disabled{opacity:.3;cursor:default}
+.mini.back{width:auto;padding:3px 9px;font-size:12px}
+.syms{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px}
+.syms button{border:0;background:var(--paper);border-radius:10px;padding:8px 4px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.syms button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--gold)}
+.syms svg{display:block;margin:0 auto;width:34px;height:34px}
+.syms .nm{display:block;font-size:10px;color:var(--muted);margin-top:4px}
+.fit{font-size:13px;margin:10px 0 0;padding:9px 12px;border-radius:9px;background:#FFF4E2;color:#7A4A05}
+.fit b{display:block}
+.fit button{margin-top:7px}
+.prog{height:5px;background:var(--soft);border-radius:99px;overflow:hidden;margin:14px 0 0}
+.prog i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+
+/* design gallery */
+.gal-wrap{padding:34px 0 8px;border-top:1px solid var(--line);margin-top:8px}
+.gal-h{font-family:Fraunces,serif;font-size:clamp(21px,3.4vw,29px);text-align:center;margin:0 0 6px}
+.gal-sub{text-align:center;color:var(--muted);margin:0 0 20px;font-size:15px}
+.gal{overflow:hidden;padding:4px 0 18px;position:relative}
+.gal-track{display:flex;gap:14px;width:max-content;animation:marquee 90s linear infinite}
+.gal:hover .gal-track,.gal:focus-within .gal-track{animation-play-state:paused}
+@keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@media (prefers-reduced-motion:reduce){
+  .gal{overflow-x:auto}
+  .gal-track{animation:none}
+}
+.tpl{flex:0 0 auto;border:0;background:none;padding:0;cursor:pointer;text-align:center}
+/* display:block matters — .shot is a span, and width/height/overflow are
+   ignored on inline elements, so the 794px sheet spills out unclipped. */
+.tpl .shot{display:block;width:150px;height:212px;overflow:hidden;border-radius:9px;background:#fff;
+  position:relative;
+  box-shadow:0 1px 2px rgba(18,58,52,.08),0 8px 22px -14px rgba(18,58,52,.45);
+  transition:transform .16s, box-shadow .16s}
+.tpl:hover .shot{transform:translateY(-3px);box-shadow:0 2px 4px rgba(18,58,52,.12),0 14px 28px -12px rgba(18,58,52,.5)}
+.tpl[aria-pressed="true"] .shot{outline:2.5px solid var(--gold);outline-offset:2px}
+.tpl .shot > div{transform:scale(.189);transform-origin:top left;pointer-events:none;
+  position:absolute;top:0;left:0}
+.tpl .nm{display:block;font-family:Fraunces,serif;font-weight:700;font-size:13.5px;color:var(--plum);margin-top:8px}
+.gal-foot{text-align:center;color:var(--muted);font-size:13px;margin:0 0 26px}
+
+/* ads: clearly labelled, clearly separated, never mistaken for a feature */
+table.tb.imp{width:100%;border-collapse:collapse;font-size:14px}
+table.tb.imp td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+table.tb.imp td:first-child{color:var(--muted);width:38%;font-size:13px}
+table.tb.imp input[type=checkbox]{width:auto;box-shadow:none}
+table.tb.imp input[type=text]{padding:6px 8px;font-size:14px}
+.ad{margin:22px auto;max-width:720px;padding:14px 16px;border:1px dashed var(--line);border-radius:12px;background:var(--card)}
+.ad-lbl{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ad-text a{display:block;text-decoration:none;color:inherit}
+.ad-text b{display:block;font-family:Fraunces,serif;font-size:16px;color:var(--plum);margin-bottom:3px}
+.ad-text span{display:block;font-size:14px;color:var(--muted);line-height:1.5}
+.ad-text em{display:inline-block;margin-top:8px;font-style:normal;font-size:13.5px;font-weight:600;color:var(--gold-hi)}
+.ad-text a:hover em{text-decoration:underline}
+
+/* seo copy */
+.copy{max-width:760px;margin:0 auto;padding:10px 20px 70px}
+.copy h2{font-size:22px;margin:34px 0 8px}
+.copy h3{font-size:16px;margin:22px 0 6px}
+.copy p,.copy li{color:var(--muted)}
+.copy ul,.copy ol{padding-left:20px}
+.faq{background:var(--card);border-radius:var(--r);padding:6px 18px;box-shadow:var(--sh);margin-top:14px}
+.faq details{border-bottom:1px solid var(--line);padding:13px 0}
+.faq details:last-child{border-bottom:0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--plum)}
+.faq p{margin:8px 0 0}
+.foot{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13.5px;text-align:center}
+.foot a{color:var(--muted)}
+
+/* ── platform adjustments ───────────────────────────────────────────── */
+html{-webkit-text-size-adjust:100%}
+
+/* iOS zooms the whole page whenever you focus an input smaller than 16px.
+   Bumping touch inputs to 16px is the only reliable way to stop it. */
+html.touch input,html.touch select,html.touch textarea{font-size:16px}
+
+/* No hover on touch, so controls that reveal on hover must always show,
+   and tap targets need to be finger sized rather than cursor sized. */
+html.touch .fbtns{opacity:1}
+html.touch .mini{width:32px;height:32px;font-size:14px}
+html.touch .mini.back{width:auto;height:auto;padding:7px 12px}
+html.touch .btn.sm{padding:10px 14px}
+html.touch .lchip{padding:10px 16px}
+
+/* Swiping beats a marquee on a phone, and it halves the number of A4
+   sheets in the DOM because the loop copy is no longer needed. */
+html.touch .gal{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding-left:20px;padding-right:20px}
+html.touch .gal-track{animation:none;width:auto}
+html.touch .tpl{scroll-snap-align:start}
+
+/* Clear of the iPhone home bar. */
+html.ios body{padding-bottom:env(safe-area-inset-bottom)}
+html.ios .top-in{padding-top:calc(12px + env(safe-area-inset-top,0px))}
+
+/* The crop canvas should fill the width it is given on a phone. */
+html.touch #crop{width:100%;max-width:300px;height:auto;aspect-ratio:3/4}
+
+@media (max-width:960px){
+  .grid{grid-template-columns:1fr}
+  .side{position:static}
+}
+</style>
+
+<link rel="canonical" href="https://koljacks.github.io/biodata/ta/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marriage Biodata Format in Tamil — free maker with photo">
+<meta property="og:description" content="Make a marriage biodata in Tamil (தமிழ்) free. Printable A4 with photo, ready in minutes. Nothing is uploaded — it all runs in your browser.">
+<meta property="og:url" content="https://koljacks.github.io/biodata/ta/">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="hi" href="https://koljacks.github.io/biodata/hi/">
+<link rel="alternate" hreflang="mr" href="https://koljacks.github.io/biodata/mr/">
+<link rel="alternate" hreflang="ta" href="https://koljacks.github.io/biodata/ta/">
+<link rel="alternate" hreflang="te" href="https://koljacks.github.io/biodata/te/">
+<link rel="alternate" hreflang="gu" href="https://koljacks.github.io/biodata/gu/">
+<link rel="alternate" hreflang="bn" href="https://koljacks.github.io/biodata/bn/">
+<link rel="alternate" hreflang="kn" href="https://koljacks.github.io/biodata/kn/">
+<link rel="alternate" hreflang="ml" href="https://koljacks.github.io/biodata/ml/">
+<link rel="alternate" hreflang="pa" href="https://koljacks.github.io/biodata/pa/">
+<link rel="alternate" hreflang="or" href="https://koljacks.github.io/biodata/or/">
+<link rel="alternate" hreflang="ur" href="https://koljacks.github.io/biodata/ur/">
+<link rel="alternate" hreflang="en" href="https://koljacks.github.io/biodata/en/">
+<link rel="alternate" hreflang="x-default" href="https://koljacks.github.io/biodata/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Marriage Biodata Maker — Tamil","url":"https://koljacks.github.io/biodata/ta/","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","inLanguage":"ta","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"isAccessibleForFree":true}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I make a marriage biodata in Tamil?","acceptedAnswer":{"@type":"Answer","text":"Choose தமிழ் above, fill in your details, pick a design and download it as an image or a printable PDF. It takes a few minutes and costs nothing."}},{"@type":"Question","name":"Is this Tamil biodata maker free?","acceptedAnswer":{"@type":"Answer","text":"Yes — every language and design is free, with no watermark and no account. Nothing is charged at any point."}},{"@type":"Question","name":"Can I add a photo?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your photo is processed on your own device and is never uploaded, so nobody else can see it."}},{"@type":"Question","name":"Can I print it?","acceptedAnswer":{"@type":"Answer","text":"Yes. The PDF is A4 sized, so any home printer or print shop can handle it without resizing."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to make a marriage biodata in Tamil","step":[{"@type":"HowToStep","name":"Choose the language","text":"Select தமிழ் so every label appears in Tamil."},{"@type":"HowToStep","name":"Fill in your details","text":"Work through personal, horoscope, education, family and contact details. Blank fields are left out."},{"@type":"HowToStep","name":"Add a photo and pick a design","text":"Upload a clear photo and choose one of six layouts."},{"@type":"HowToStep","name":"Download","text":"Save it as an image for WhatsApp, or as an A4 PDF for printing."}]}</script>
+<script>window.__LANG__ = "ta";</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="./"><span class="mark">♥</span>Biodata Maker</a>
+    <span class="sp"></span>
+    <span id="gt" style="display:flex;align-items:center;gap:6px">
+      <button class="btn ghost sm" id="installBtn" hidden title="Add to your home screen">Install</button>
+      <button class="btn ghost sm" id="tintBtn" title="Tint the page to the time of day">◐</button>
+      <button class="btn ghost sm" id="gtBtn" title="Translate this page with Google">🌐 Translate page</button>
+      <span id="google_translate_element" style="display:none"></span>
+    </span>
+    <button class="btn ghost sm" id="restore">Restore draft</button>
+    <button class="btn gold sm" id="jump">Start</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 id="heroH1">Marriage biodata format<br>in <em>தமிழ்</em></h1>
+    <p id="heroP">Make a printable marriage biodata in Tamil with your photo — free, no signup, and nothing you type ever leaves your phone. Spoken by about 79 million, Tamil is widely used for biodatas Tamil Nadu.</p>
+    <div class="langbar" id="langbar"></div>
+    <div class="trust">
+      <span class="tb">No signup</span>
+      <span class="tb">No watermark</span>
+      <span class="tb">Photo stays on your device</span>
+      <span class="tb">Print-ready A4</span>
+    </div>
+  </div>
+</section>
+
+<section class="gal-wrap">
+  <div class="wrap">
+    <h2 class="gal-h">Twenty-one designs, ready to use</h2>
+    <p class="gal-sub">Every one is a live rendering, not a picture. Press any design to build your biodata with it.</p>
+  </div>
+  <div class="gal" id="gal"></div>
+  <p class="gal-foot">Hover to pause · press any design to use it</p>
+  <div class="wrap" id="adTop"></div>
+</section>
+
+<div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="panel">
+        <div class="steps" id="steps"></div>
+        <div id="form"></div>
+        <div class="btns" id="trbar"></div>
+        <div class="btns">
+          <button class="btn ghost sm" id="addf">+ Add your own field</button>
+          <button class="btn ghost sm" id="sample">Fill sample data</button>
+          <button class="btn ghost sm" id="clear">Clear all</button>
+        </div>
+        <div class="prog"><i id="bar"></i></div>
+        <p class="hint" id="prog">Nothing filled in yet.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Already have a biodata?</h2>
+        <p class="sub">Drop a screenshot, photo or PDF of an existing one and the details will be read out of it and filled in for you.</p>
+        <div class="drop" id="impDz" role="button" tabindex="0" style="padding:22px"><b>Drop a biodata here</b><span>JPG, PNG or PDF · read on your device, never uploaded</span></div>
+        <p class="hint" id="impMsg"></p>
+        <div id="impResult" hidden>
+          <div style="overflow:auto;max-height:320px;margin-top:12px">
+            <table class="tb imp" id="impTable"></table>
+          </div>
+          <div class="btns">
+            <button class="btn" id="impApply">Fill these in</button>
+            <button class="btn ghost sm" id="impCancel">Discard</button>
+          </div>
+          <p class="hint">Reading text from a picture is never perfect — check every line before you send it to anyone.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Design</h2>
+        <p class="sub">Pick a look. All of them print cleanly in black and white too.</p>
+        <div class="themes" id="themes"></div>
+        <div class="row" style="margin-top:16px">
+          <label class="f"><span>Layout</span><select id="layout">
+            <option value="single">Single column</option>
+            <option value="two">Two columns</option>
+            <option value="wide">Wide labels</option>
+            <option value="narrow">Narrow labels</option>
+          </select></label>
+          <label class="f"><span>Spacing</span><select id="density">
+            <option value="tight">Very tight</option>
+            <option value="compact">Compact</option>
+            <option value="normal" selected>Normal</option>
+            <option value="roomy">Roomy</option>
+            <option value="airy">Very airy</option>
+          </select></label>
+          <label class="f"><span>Typeface</span><select id="font">
+            <option value="serif">Classic serif</option>
+            <option value="sans">Clean sans</option>
+            <option value="mixed">Serif headings, sans body</option>
+            <option value="mono">Typewriter</option>
+          </select></label>
+          <label class="f"><span>Name heading</span><select id="hstyle">
+            <option value="plain">Plain, rule below</option>
+            <option value="band">Coloured band</option>
+            <option value="rule">Framed box</option>
+            <option value="center">Centred, no rule</option>
+            <option value="minimal">Small and quiet</option>
+          </select></label>
+        </div>
+        <div style="margin-top:18px">
+          <span class="f" style="display:block"><span>Faith symbol at the top</span></span>
+          <div class="syms" id="syms"></div>
+        </div>
+        <div class="row" style="margin-top:13px">
+          <label class="f"><span>Blessing line</span><select id="head"></select></label>
+          <label class="f"><span>Photo shape</span><select id="pshape">
+            <option value="12px">Rounded</option><option value="50%">Circle</option><option value="0">Square</option>
+          </select></label>
+          <label class="f"><span>Photo position</span><select id="ppos">
+            <option value="right">Top right</option><option value="center">Centred</option><option value="none">No photo</option>
+          </select></label>
+          <label class="f"><span>Style</span><select id="fmt">
+            <option value="in">Traditional Indian</option>
+            <option value="world">International (no caste or horoscope)</option>
+          </select></label>
+        </div>
+        <label class="f" style="margin-top:14px"><span>Photo</span><input type="file" id="photo" accept="image/*"></label>
+        <div id="cropWrap" hidden style="margin-top:14px">
+          <p class="hint" style="margin:0 0 8px">Drag to position the face, and zoom until it sits well. Biodata photos are 3:4 portrait.</p>
+          <canvas id="crop" width="240" height="320"
+            style="border-radius:10px;cursor:grab;touch-action:none;box-shadow:inset 0 0 0 1px var(--line);background:var(--soft)"></canvas>
+          <label class="f" style="margin-top:10px"><span>Zoom</span>
+            <input type="range" id="zoomR" min="100" max="300" value="100"></label>
+          <div class="btns"><button class="btn ghost sm" id="cropOff">Remove photo</button></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Background</h2>
+        <p class="sub">A faint motif behind the text. All of these are drawn as artwork, so they stay sharp when printed.</p>
+        <div class="motifs" id="motifs"></div>
+        <div class="row" style="margin-top:16px">
+          <label class="f"><span>Placement</span><select id="mplace">
+            <option value="auto">As designed</option>
+            <option value="center">Centred only</option>
+            <option value="tile">Tiled</option>
+          </select></label>
+          <label class="f"><span>Strength — <span id="mov">10</span>%</span>
+            <input type="range" id="mopacity" min="3" max="45" value="10"></label>
+          <label class="f"><span>Border</span><select id="border">
+            <option value="double">Double line</option><option value="solid">Single line</option>
+            <option value="none">No border</option>
+          </select></label>
+        </div>
+        <label class="f" style="margin-top:14px"><span>Or use your own picture</span>
+          <input type="file" id="bgimg" accept="image/*"></label>
+        <p class="hint">Use an image you own or have permission to use — a family photograph, or artwork you bought. Pictures found through a web search usually belong to the photographer or artist. Keep the strength low so the text stays readable.</p>
+        <div class="btns"><button class="btn ghost sm" id="bgclear">Remove picture</button></div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel" style="margin-bottom:12px">
+        <h2>Preview</h2>
+        <p class="sub">This is exactly what downloads. <span id="pagecount"></span></p>
+        <div class="pv notranslate" translate="no"><div class="pv-in" id="pvin"><div id="sheet"></div></div></div>
+        <p class="fit" id="mixwarn" hidden></p>
+        <p class="fit" id="fitwarn" hidden></p>
+        <div class="btns" style="margin-top:10px">
+          <button class="btn ghost sm" id="egBtn">Show a worked example</button>
+        </div>
+        <div class="dl">
+          <button class="btn gold" id="share" hidden>Send on WhatsApp</button>
+          <button class="btn gold" id="png">Download image</button>
+          <button class="btn" id="pdf">Download PDF</button>
+          <button class="btn ghost" id="print">Print</button>
+        </div>
+        <p class="hint" id="msg">Tip: the image is easiest to send on WhatsApp; the PDF is better for printing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="copy">
+  <h2>How to make a marriage biodata</h2>
+  <p>A marriage biodata is the one-page introduction families exchange when a match is first suggested. It is not a CV. It is read quickly, usually by parents and elders, and it answers a small set of practical questions before anyone meets.</p>
+
+  <h3>What a biodata should contain</h3>
+  <ol>
+    <li><strong>Name, date and place of birth.</strong> Time of birth matters if horoscopes will be matched.</li>
+    <li><strong>Height, and basic personal details</strong> — diet, mother tongue, marital status.</li>
+    <li><strong>Education and work.</strong> Degree, role, and the city you work in. Income is optional and many families leave it out.</li>
+    <li><strong>Family details.</strong> Parents' names and occupations, siblings, native place. For many families this section carries more weight than the career one.</li>
+    <li><strong>Horoscope details</strong> if relevant — gotra, rashi, nakshatra, manglik status.</li>
+    <li><strong>One clear contact.</strong> Usually a parent, with a phone number.</li>
+  </ol>
+
+  <h3>Mistakes worth avoiding</h3>
+  <ul>
+    <li><strong>Too long.</strong> One page. If it runs to two, cut the adjectives, not the facts.</li>
+    <li><strong>A casual photo.</strong> Plain background, natural light, looking at the camera. It does not need a studio.</li>
+    <li><strong>Vague wording.</strong> "Good family values" says nothing. "Father retired from State Bank, mother is a school teacher" says a great deal.</li>
+    <li><strong>Sharing it too widely.</strong> A biodata carries your full name, photo, birth details and a phone number. Send it to specific people, not open WhatsApp groups.</li>
+  </ul>
+
+  <h3>Which language should you use?</h3>
+  <p>Use the language the receiving family reads most comfortably. Many people make two versions — one in English for wider circulation, one in the mother tongue for close relatives and community groups. You can switch language here and download again; your details are kept.</p>
+
+  <div class="faq">
+    <details><summary>Is this really free?</summary><p>Yes. Every language, every design, no watermark, no account. It is free because it costs nothing to run — the work happens in your browser, not on a server.</p></details>
+    <details><summary>Where do my photo and details go?</summary><p>Nowhere. Everything stays in your browser's memory and, if you save a draft, in your own device storage. Nothing is uploaded, so nobody can see it — including me.</p></details>
+    <details><summary>Can I edit it later?</summary><p>Yes. Your work is saved automatically on this device, and "Restore draft" brings it back. You can also download a backup file and load it on another device.</p></details>
+    <details><summary>My language is not in the list.</summary><p>Every label can be edited — click any label above the box and type over it. You can also add your own fields, so a biodata in any language your keyboard supports is possible.</p></details>
+    <details><summary>Should I include my income?</summary><p>It is optional and entirely your choice. Many families leave it out at first and discuss it later. Leave the field blank and it will not appear.</p></details>
+    <details><summary>What size does it print at?</summary><p>Standard A4. The PDF is set up for it, so any print shop or home printer will handle it without resizing.</p></details>
+  </div>
+
+  <div id="adFoot"></div>
+
+  
+  <h2>Biodata conventions in Tamil</h2>
+  <p>Tamil families place particular weight on horoscope matching, so exact time and place of birth matter more here than in most formats. Nakshatra and rasi are often the first two lines read.</p>
+  <h3>One thing worth getting right</h3>
+  <p>If a jathagam is being sent separately, still put the birth time on the biodata — it saves a follow-up message.</p>
+  <h3>Common questions</h3>
+  <div class="faq">
+    <details><summary>How do I make a marriage biodata in Tamil?</summary><p>Choose தமிழ் above, fill in your details, pick a design and download it as an image or a printable PDF. It takes a few minutes and costs nothing.</p></details>
+    <details><summary>Is this Tamil biodata maker free?</summary><p>Yes — every language and design is free, with no watermark and no account. Nothing is charged at any point.</p></details>
+    <details><summary>Can I add a photo?</summary><p>Yes. Your photo is processed on your own device and is never uploaded, so nobody else can see it.</p></details>
+    <details><summary>Can I print it?</summary><p>Yes. The PDF is A4 sized, so any home printer or print shop can handle it without resizing.</p></details>
+  </div>
+  <h3>Other languages</h3>
+  <p><a href="https://koljacks.github.io/biodata/hi/">Biodata in Hindi</a> · <a href="https://koljacks.github.io/biodata/mr/">Biodata in Marathi</a> · <a href="https://koljacks.github.io/biodata/te/">Biodata in Telugu</a> · <a href="https://koljacks.github.io/biodata/gu/">Biodata in Gujarati</a> · <a href="https://koljacks.github.io/biodata/bn/">Biodata in Bengali</a> · <a href="https://koljacks.github.io/biodata/kn/">Biodata in Kannada</a> · <a href="https://koljacks.github.io/biodata/ml/">Biodata in Malayalam</a> · <a href="https://koljacks.github.io/biodata/pa/">Biodata in Punjabi</a> · <a href="https://koljacks.github.io/biodata/or/">Biodata in Odia</a> · <a href="https://koljacks.github.io/biodata/ur/">Biodata in Urdu</a> · <a href="https://koljacks.github.io/biodata/en/">Biodata in English</a></p>
+
+  <h2>Why a browser-based tool</h2>
+  <p>A marriage biodata contains your full name, photograph, exact birth time, family details and a phone number. That is a lot to hand to a website you have never heard of. This one was built so the question never arises: the page does the work on your own device, and there is no server to upload to.</p>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    Free to use, and always will be. Nothing you enter is uploaded.<br>
+    <span style="display:inline-block;margin:8px 0">
+      <a href="https://koljacks.github.io/biodata/about/">About</a> · <a href="https://koljacks.github.io/biodata/privacy/">Privacy</a> ·
+      <a href="https://koljacks.github.io/biodata/terms/">Terms</a> · <a href="https://koljacks.github.io/biodata/contact/">Contact</a>
+    </span><br>
+    <span id="langlinks"></span>
+  </div>
+</footer>
+
+<script>
+/* Platform classes go on <html> before first paint, so nothing flickers.
+   Kept tiny and deliberately feature-led: the only thing sniffed by name is
+   iOS, because its quirks (input zoom, download behaviour, the home bar)
+   genuinely cannot be feature-detected. */
+(function(){
+  var ua = navigator.userAgent || '';
+  var iOS = /iPad|iPhone|iPod/.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var android = /Android/.test(ua);
+  var touch = (navigator.maxTouchPoints > 0) ||
+              (window.matchMedia && matchMedia('(hover: none)').matches);
+  var c = document.documentElement.classList;
+  if(iOS) c.add('ios');
+  if(android) c.add('android');
+  if(touch) c.add('touch');
+  window.__PLATFORM__ = { ios:iOS, android:android, touch:touch };
+})();
+</script>
+<script>
+(function(){
+"use strict";
+var $ = function(s,r){ return (r||document).querySelector(s); };
+var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+var esc = function(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+
+var CDN_H2C   = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+var CDN_JSPDF = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+var loaded = {};
+function need(u){
+  if(loaded[u]) return loaded[u];
+  return loaded[u] = new Promise(function(res,rej){
+    var s=document.createElement('script'); s.src=u; s.onload=res; s.onerror=rej;
+    document.head.appendChild(s);
+  });
+}
+/* click-to-browse plus drag-and-drop on one element */
+function dropzone(zone, accept, onFiles){
+  if(!zone) return;
+  var inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = accept; inp.style.display = 'none';
+  zone.parentNode.insertBefore(inp, zone.nextSibling);
+  zone.addEventListener('click', function(){ inp.click(); });
+  zone.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); inp.click(); }
+  });
+  inp.addEventListener('change', function(){ onFiles(inp.files); inp.value = ''; });
+  ['dragenter','dragover'].forEach(function(ev){
+    zone.addEventListener(ev, function(e){ e.preventDefault(); zone.style.borderColor = 'var(--gold)'; });
+  });
+  ['dragleave','drop'].forEach(function(ev){
+    zone.addEventListener(ev, function(e){ e.preventDefault(); zone.style.borderColor = ''; });
+  });
+  zone.addEventListener('drop', function(e){
+    if(e.dataTransfer && e.dataTransfer.files) onFiles(e.dataTransfer.files);
+  });
+}
+function download(href,name){
+  var a=document.createElement('a'); a.href=href; a.download=name;
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+/* ── fields, grouped into the five steps ───────────────────────────── */
+var FIELDS = [
+  ['name','p'],['dob','p'],['tob','p'],['pob','p'],['height','p'],['weight','p'],
+  ['blood','p'],['complexion','p'],['marital','p'],['diet','p'],['tongue','p'],['hobbies','p'],
+  ['religion','r'],['caste','r'],['subcaste','r'],['gotra','r'],['rashi','r'],['nakshatra','r'],['manglik','r'],
+  ['education','e'],['occupation','e'],['company','e'],['income','e'],['workplace','e'],
+  ['father','f'],['fatherocc','f'],['mother','f'],['motherocc','f'],['siblings','f'],['native','f'],['ftype','f'],
+  ['person','c'],['phone','c'],['email','c'],['address','c']
+];
+var SECTIONS = ['p','r','e','f','c'];
+/* a calendar beats typing a date wrong, and a time picker beats "6.42 am" */
+var FIELD_TYPE = { dob:'date', tob:'time' };
+/* Showing the shape you want is the cheapest way to get consistent input. */
+var PLACEHOLD = {
+  name:'Aarav Sharma', pob:'Pune, Maharashtra', height:'5\' 10" (178 cm)', weight:'72 kg',
+  blood:'B+', complexion:'Fair', marital:'Never married', diet:'Vegetarian',
+  tongue:'Marathi', hobbies:'Trekking, photography, cooking',
+  religion:'Hindu', caste:'Brahmin', subcaste:'Deshastha', gotra:'Kashyap',
+  rashi:'Simha', nakshatra:'Magha', manglik:'No',
+  education:'B.E. Computer Science, COEP Pune', occupation:'Software Engineer',
+  company:'Infosys Ltd.', income:'₹18 lakh per annum', workplace:'Pune',
+  father:'Shri Rajesh Sharma', fatherocc:'Retired Bank Manager',
+  mother:'Smt. Sunita Sharma', motherocc:'Homemaker',
+  siblings:'One younger sister, unmarried', native:'Nashik', ftype:'Nuclear family',
+  person:'Shri Rajesh Sharma (Father)', phone:'+91 98765 43210',
+  email:'sharma.family@example.com', address:'Kothrud, Pune 411038'
+};
+function prettyDate(v, lang){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(v)) return v;
+  var d = new Date(v + 'T00:00:00');
+  if(isNaN(d.getTime())) return v;
+  try{
+    return d.toLocaleDateString((lang === 'en' ? 'en-IN' : lang + '-IN'),
+      {day:'numeric', month:'long', year:'numeric'});
+  }catch(e){ return d.toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'}); }
+}
+function prettyTime(v){
+  var m = /^(\d{1,2}):(\d{2})$/.exec(v); if(!m) return v;
+  var h = +m[1], ap = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  return h + ':' + m[2] + ' ' + ap;
+}
+function shownValue(k, lang){
+  var v = (S.vals[k] || '').trim();
+  if(!v) return '';
+  if(FIELD_TYPE[k] === 'date') return prettyDate(v, lang);
+  if(FIELD_TYPE[k] === 'time') return prettyTime(v);
+  return v;
+}
+var STEPNAMES = { p:'Personal', r:'Horoscope', e:'Education', f:'Family', c:'Contact' };
+
+var LANG = {
+  en:{n:'English',p:'Personal Details',r:'Religious Details',e:'Education & Career',f:'Family Details',c:'Contact Details',
+    name:'Name',dob:'Date of Birth',tob:'Time of Birth',pob:'Place of Birth',height:'Height',weight:'Weight',
+    blood:'Blood Group',complexion:'Complexion',marital:'Marital Status',diet:'Diet',tongue:'Mother Tongue',hobbies:'Hobbies',
+    religion:'Religion',caste:'Caste',subcaste:'Sub-caste',gotra:'Gotra',rashi:'Rashi',nakshatra:'Nakshatra',manglik:'Manglik',
+    education:'Education',occupation:'Occupation',company:'Company',income:'Annual Income',workplace:'Work Location',
+    father:"Father's Name",fatherocc:"Father's Occupation",mother:"Mother's Name",motherocc:"Mother's Occupation",
+    siblings:'Siblings',native:'Native Place',ftype:'Family Type',
+    person:'Contact Person',phone:'Phone',email:'Email',address:'Address',about:'About Me',partner:'Partner Preferences'},
+  hi:{n:'हिन्दी',p:'व्यक्तिगत विवरण',r:'धार्मिक विवरण',e:'शिक्षा एवं व्यवसाय',f:'पारिवारिक विवरण',c:'संपर्क विवरण',
+    name:'नाम',dob:'जन्म तिथि',tob:'जन्म समय',pob:'जन्म स्थान',height:'कद',weight:'वजन',
+    blood:'रक्त समूह',complexion:'रंग',marital:'वैवाहिक स्थिति',diet:'आहार',tongue:'मातृभाषा',hobbies:'रुचियाँ',
+    religion:'धर्म',caste:'जाति',subcaste:'उपजाति',gotra:'गोत्र',rashi:'राशि',nakshatra:'नक्षत्र',manglik:'मांगलिक',
+    education:'शिक्षा',occupation:'व्यवसाय',company:'कंपनी',income:'वार्षिक आय',workplace:'कार्यस्थल',
+    father:'पिता का नाम',fatherocc:'पिता का व्यवसाय',mother:'माता का नाम',motherocc:'माता का व्यवसाय',
+    siblings:'भाई / बहन',native:'मूल निवास',ftype:'परिवार का प्रकार',
+    person:'संपर्क व्यक्ति',phone:'दूरभाष',email:'ईमेल',address:'पता',about:'मेरे बारे में',partner:'जीवनसाथी की अपेक्षाएँ'},
+  mr:{n:'मराठी',p:'वैयक्तिक माहिती',r:'धार्मिक माहिती',e:'शिक्षण व व्यवसाय',f:'कौटुंबिक माहिती',c:'संपर्क माहिती',
+    name:'नाव',dob:'जन्म तारीख',tob:'जन्म वेळ',pob:'जन्म ठिकाण',height:'उंची',weight:'वजन',
+    blood:'रक्तगट',complexion:'वर्ण',marital:'वैवाहिक स्थिती',diet:'आहार',tongue:'मातृभाषा',hobbies:'छंद',
+    religion:'धर्म',caste:'जात',subcaste:'पोटजात',gotra:'गोत्र',rashi:'रास',nakshatra:'नक्षत्र',manglik:'मंगळ',
+    education:'शिक्षण',occupation:'व्यवसाय',company:'कंपनी',income:'वार्षिक उत्पन्न',workplace:'कार्यस्थळ',
+    father:'वडिलांचे नाव',fatherocc:'वडिलांचा व्यवसाय',mother:'आईचे नाव',motherocc:'आईचा व्यवसाय',
+    siblings:'भाऊ / बहीण',native:'मूळ गाव',ftype:'कुटुंब प्रकार',
+    person:'संपर्क व्यक्ती',phone:'दूरध्वनी',email:'ईमेल',address:'पत्ता',about:'माझ्याबद्दल',partner:'जोडीदाराबाबत अपेक्षा'},
+  gu:{n:'ગુજરાતી',p:'વ્યક્તિગત વિગતો',r:'ધાર્મિક વિગતો',e:'શિક્ષણ અને વ્યવસાય',f:'કૌટુંબિક વિગતો',c:'સંપર્ક વિગતો',
+    name:'નામ',dob:'જન્મ તારીખ',tob:'જન્મ સમય',pob:'જન્મ સ્થળ',height:'ઊંચાઈ',weight:'વજન',
+    blood:'રક્ત જૂથ',complexion:'વર્ણ',marital:'વૈવાહિક સ્થિતિ',diet:'આહાર',tongue:'માતૃભાષા',hobbies:'શોખ',
+    religion:'ધર્મ',caste:'જ્ઞાતિ',subcaste:'પેટા જ્ઞાતિ',gotra:'ગોત્ર',rashi:'રાશિ',nakshatra:'નક્ષત્ર',manglik:'માંગલિક',
+    education:'શિક્ષણ',occupation:'વ્યવસાય',company:'કંપની',income:'વાર્ષિક આવક',workplace:'કાર્યસ્થળ',
+    father:'પિતાનું નામ',fatherocc:'પિતાનો વ્યવસાય',mother:'માતાનું નામ',motherocc:'માતાનો વ્યવસાય',
+    siblings:'ભાઈ / બહેન',native:'વતન',ftype:'કુટુંબનો પ્રકાર',
+    person:'સંપર્ક વ્યક્તિ',phone:'ફોન',email:'ઈમેલ',address:'સરનામું',about:'મારા વિશે',partner:'જીવનસાથી અંગે અપેક્ષા'},
+  bn:{n:'বাংলা',p:'ব্যক্তিগত তথ্য',r:'ধর্মীয় তথ্য',e:'শিক্ষা ও পেশা',f:'পারিবারিক তথ্য',c:'যোগাযোগের তথ্য',
+    name:'নাম',dob:'জন্ম তারিখ',tob:'জন্ম সময়',pob:'জন্মস্থান',height:'উচ্চতা',weight:'ওজন',
+    blood:'রক্তের গ্রুপ',complexion:'গায়ের রং',marital:'বৈবাহিক অবস্থা',diet:'খাদ্যাভ্যাস',tongue:'মাতৃভাষা',hobbies:'শখ',
+    religion:'ধর্ম',caste:'জাতি',subcaste:'উপজাতি',gotra:'গোত্র',rashi:'রাশি',nakshatra:'নক্ষত্র',manglik:'মাঙ্গলিক',
+    education:'শিক্ষা',occupation:'পেশা',company:'কোম্পানি',income:'বার্ষিক আয়',workplace:'কর্মস্থল',
+    father:'পিতার নাম',fatherocc:'পিতার পেশা',mother:'মাতার নাম',motherocc:'মাতার পেশা',
+    siblings:'ভাই / বোন',native:'নিজ গ্রাম',ftype:'পরিবারের ধরন',
+    person:'যোগাযোগকারী',phone:'ফোন',email:'ইমেল',address:'ঠিকানা',about:'আমার সম্পর্কে',partner:'জীবনসঙ্গী সম্পর্কে প্রত্যাশা'},
+  ta:{n:'தமிழ்',p:'தனிப்பட்ட விவரங்கள்',r:'மத விவரங்கள்',e:'கல்வி மற்றும் தொழில்',f:'குடும்ப விவரங்கள்',c:'தொடர்பு விவரங்கள்',
+    name:'பெயர்',dob:'பிறந்த தேதி',tob:'பிறந்த நேரம்',pob:'பிறந்த இடம்',height:'உயரம்',weight:'எடை',
+    blood:'இரத்த வகை',complexion:'நிறம்',marital:'திருமண நிலை',diet:'உணவு முறை',tongue:'தாய்மொழி',hobbies:'பொழுதுபோக்கு',
+    religion:'மதம்',caste:'சாதி',subcaste:'உட்பிரிவு',gotra:'கோத்திரம்',rashi:'ராசி',nakshatra:'நட்சத்திரம்',manglik:'செவ்வாய் தோஷம்',
+    education:'கல்வி',occupation:'தொழில்',company:'நிறுவனம்',income:'ஆண்டு வருமானம்',workplace:'பணியிடம்',
+    father:'தந்தை பெயர்',fatherocc:'தந்தை தொழில்',mother:'தாய் பெயர்',motherocc:'தாய் தொழில்',
+    siblings:'சகோதர சகோதரிகள்',native:'சொந்த ஊர்',ftype:'குடும்ப வகை',
+    person:'தொடர்பு நபர்',phone:'தொலைபேசி',email:'மின்னஞ்சல்',address:'முகவரி',about:'என்னைப் பற்றி',partner:'வாழ்க்கைத் துணை எதிர்பார்ப்பு'},
+  te:{n:'తెలుగు',p:'వ్యక్తిగత వివరాలు',r:'మత వివరాలు',e:'విద్య మరియు వృత్తి',f:'కుటుంబ వివరాలు',c:'సంప్రదింపు వివరాలు',
+    name:'పేరు',dob:'పుట్టిన తేదీ',tob:'పుట్టిన సమయం',pob:'జన్మ స్థలం',height:'ఎత్తు',weight:'బరువు',
+    blood:'రక్త వర్గం',complexion:'ఛాయ',marital:'వైవాహిక స్థితి',diet:'ఆహారం',tongue:'మాతృభాష',hobbies:'అభిరుచులు',
+    religion:'మతం',caste:'కులం',subcaste:'ఉపకులం',gotra:'గోత్రం',rashi:'రాశి',nakshatra:'నక్షత్రం',manglik:'కుజ దోషం',
+    education:'విద్య',occupation:'వృత్తి',company:'సంస్థ',income:'వార్షిక ఆదాయం',workplace:'పని ప్రదేశం',
+    father:'తండ్రి పేరు',fatherocc:'తండ్రి వృత్తి',mother:'తల్లి పేరు',motherocc:'తల్లి వృత్తి',
+    siblings:'సోదర సోదరీమణులు',native:'స్వస్థలం',ftype:'కుటుంబ రకం',
+    person:'సంప్రదించవలసిన వ్యక్తి',phone:'ఫోన్',email:'ఇమెయిల్',address:'చిరునామా',about:'నా గురించి',partner:'జీవిత భాగస్వామి అంచనాలు'},
+  kn:{n:'ಕನ್ನಡ',p:'ವೈಯಕ್ತಿಕ ವಿವರಗಳು',r:'ಧಾರ್ಮಿಕ ವಿವರಗಳು',e:'ಶಿಕ್ಷಣ ಮತ್ತು ವೃತ್ತಿ',f:'ಕುಟುಂಬದ ವಿವರಗಳು',c:'ಸಂಪರ್ಕ ವಿವರಗಳು',
+    name:'ಹೆಸರು',dob:'ಜನ್ಮ ದಿನಾಂಕ',tob:'ಜನ್ಮ ಸಮಯ',pob:'ಜನ್ಮ ಸ್ಥಳ',height:'ಎತ್ತರ',weight:'ತೂಕ',
+    blood:'ರಕ್ತದ ಗುಂಪು',complexion:'ಬಣ್ಣ',marital:'ವೈವಾಹಿಕ ಸ್ಥಿತಿ',diet:'ಆಹಾರ',tongue:'ಮಾತೃಭಾಷೆ',hobbies:'ಹವ್ಯಾಸಗಳು',
+    religion:'ಧರ್ಮ',caste:'ಜಾತಿ',subcaste:'ಉಪಜಾತಿ',gotra:'ಗೋತ್ರ',rashi:'ರಾಶಿ',nakshatra:'ನಕ್ಷತ್ರ',manglik:'ಮಾಂಗಲಿಕ',
+    education:'ಶಿಕ್ಷಣ',occupation:'ವೃತ್ತಿ',company:'ಕಂಪನಿ',income:'ವಾರ್ಷಿಕ ಆದಾಯ',workplace:'ಕೆಲಸದ ಸ್ಥಳ',
+    father:'ತಂದೆಯ ಹೆಸರು',fatherocc:'ತಂದೆಯ ವೃತ್ತಿ',mother:'ತಾಯಿಯ ಹೆಸರು',motherocc:'ತಾಯಿಯ ವೃತ್ತಿ',
+    siblings:'ಸಹೋದರ ಸಹೋದರಿಯರು',native:'ಸ್ವಂತ ಊರು',ftype:'ಕುಟುಂಬದ ಪ್ರಕಾರ',
+    person:'ಸಂಪರ್ಕ ವ್ಯಕ್ತಿ',phone:'ದೂರವಾಣಿ',email:'ಇಮೇಲ್',address:'ವಿಳಾಸ',about:'ನನ್ನ ಬಗ್ಗೆ',partner:'ಸಂಗಾತಿಯ ಬಗ್ಗೆ ನಿರೀಕ್ಷೆ'},
+  ml:{n:'മലയാളം',p:'വ്യക്തിഗത വിവരങ്ങൾ',r:'മത വിവരങ്ങൾ',e:'വിദ്യാഭ്യാസവും ജോലിയും',f:'കുടുംബ വിവരങ്ങൾ',c:'ബന്ധപ്പെടാനുള്ള വിവരങ്ങൾ',
+    name:'പേര്',dob:'ജനന തീയതി',tob:'ജനന സമയം',pob:'ജനന സ്ഥലം',height:'ഉയരം',weight:'ഭാരം',
+    blood:'രക്തഗ്രൂപ്പ്',complexion:'നിറം',marital:'വൈവാഹിക നില',diet:'ആഹാരം',tongue:'മാതൃഭാഷ',hobbies:'വിനോദങ്ങൾ',
+    religion:'മതം',caste:'ജാതി',subcaste:'ഉപജാതി',gotra:'ഗോത്രം',rashi:'രാശി',nakshatra:'നക്ഷത്രം',manglik:'ചൊവ്വാ ദോഷം',
+    education:'വിദ്യാഭ്യാസം',occupation:'ജോലി',company:'സ്ഥാപനം',income:'വാർഷിക വരുമാനം',workplace:'ജോലി സ്ഥലം',
+    father:'അച്ഛന്റെ പേര്',fatherocc:'അച്ഛന്റെ ജോലി',mother:'അമ്മയുടെ പേര്',motherocc:'അമ്മയുടെ ജോലി',
+    siblings:'സഹോദരങ്ങൾ',native:'സ്വദേശം',ftype:'കുടുംബ തരം',
+    person:'ബന്ധപ്പെടേണ്ട വ്യക്തി',phone:'ഫോൺ',email:'ഇമെയിൽ',address:'വിലാസം',about:'എന്നെക്കുറിച്ച്',partner:'ജീവിതപങ്കാളിയെക്കുറിച്ച്'},
+  pa:{n:'ਪੰਜਾਬੀ',p:'ਨਿੱਜੀ ਵੇਰਵੇ',r:'ਧਾਰਮਿਕ ਵੇਰਵੇ',e:'ਸਿੱਖਿਆ ਅਤੇ ਕਿੱਤਾ',f:'ਪਰਿਵਾਰਕ ਵੇਰਵੇ',c:'ਸੰਪਰਕ ਵੇਰਵੇ',
+    name:'ਨਾਮ',dob:'ਜਨਮ ਮਿਤੀ',tob:'ਜਨਮ ਸਮਾਂ',pob:'ਜਨਮ ਸਥਾਨ',height:'ਕੱਦ',weight:'ਭਾਰ',
+    blood:'ਖੂਨ ਦਾ ਗਰੁੱਪ',complexion:'ਰੰਗ',marital:'ਵਿਆਹੁਤਾ ਸਥਿਤੀ',diet:'ਖੁਰਾਕ',tongue:'ਮਾਤ ਭਾਸ਼ਾ',hobbies:'ਸ਼ੌਕ',
+    religion:'ਧਰਮ',caste:'ਜਾਤ',subcaste:'ਉਪ-ਜਾਤ',gotra:'ਗੋਤ',rashi:'ਰਾਸ਼ੀ',nakshatra:'ਨਛੱਤਰ',manglik:'ਮਾਂਗਲਿਕ',
+    education:'ਸਿੱਖਿਆ',occupation:'ਕਿੱਤਾ',company:'ਕੰਪਨੀ',income:'ਸਾਲਾਨਾ ਆਮਦਨ',workplace:'ਕੰਮ ਦਾ ਸਥਾਨ',
+    father:'ਪਿਤਾ ਦਾ ਨਾਮ',fatherocc:'ਪਿਤਾ ਦਾ ਕਿੱਤਾ',mother:'ਮਾਤਾ ਦਾ ਨਾਮ',motherocc:'ਮਾਤਾ ਦਾ ਕਿੱਤਾ',
+    siblings:'ਭੈਣ / ਭਰਾ',native:'ਜੱਦੀ ਸਥਾਨ',ftype:'ਪਰਿਵਾਰ ਦੀ ਕਿਸਮ',
+    person:'ਸੰਪਰਕ ਵਿਅਕਤੀ',phone:'ਫ਼ੋਨ',email:'ਈਮੇਲ',address:'ਪਤਾ',about:'ਮੇਰੇ ਬਾਰੇ',partner:'ਜੀਵਨ ਸਾਥੀ ਬਾਰੇ ਉਮੀਦਾਂ'},
+  or:{n:'ଓଡ଼ିଆ',p:'ବ୍ୟକ୍ତିଗତ ବିବରଣୀ',r:'ଧାର୍ମିକ ବିବରଣୀ',e:'ଶିକ୍ଷା ଓ ବୃତ୍ତି',f:'ପାରିବାରିକ ବିବରଣୀ',c:'ଯୋଗାଯୋଗ ବିବରଣୀ',
+    name:'ନାମ',dob:'ଜନ୍ମ ତାରିଖ',tob:'ଜନ୍ମ ସମୟ',pob:'ଜନ୍ମ ସ୍ଥାନ',height:'ଉଚ୍ଚତା',weight:'ଓଜନ',
+    blood:'ରକ୍ତ ଗୋଷ୍ଠୀ',complexion:'ରଙ୍ଗ',marital:'ବୈବାହିକ ସ୍ଥିତି',diet:'ଖାଦ୍ୟ',tongue:'ମାତୃଭାଷା',hobbies:'ସଉକ',
+    religion:'ଧର୍ମ',caste:'ଜାତି',subcaste:'ଉପଜାତି',gotra:'ଗୋତ୍ର',rashi:'ରାଶି',nakshatra:'ନକ୍ଷତ୍ର',manglik:'ମାଙ୍ଗଳିକ',
+    education:'ଶିକ୍ଷା',occupation:'ବୃତ୍ତି',company:'କମ୍ପାନୀ',income:'ବାର୍ଷିକ ଆୟ',workplace:'କର୍ମସ୍ଥଳ',
+    father:'ପିତାଙ୍କ ନାମ',fatherocc:'ପିତାଙ୍କ ବୃତ୍ତି',mother:'ମାତାଙ୍କ ନାମ',motherocc:'ମାତାଙ୍କ ବୃତ୍ତି',
+    siblings:'ଭାଇ / ଭଉଣୀ',native:'ମୂଳ ସ୍ଥାନ',ftype:'ପରିବାର ପ୍ରକାର',
+    person:'ଯୋଗାଯୋଗ ବ୍ୟକ୍ତି',phone:'ଫୋନ',email:'ଇମେଲ',address:'ଠିକଣା',about:'ମୋ ବିଷୟରେ',partner:'ଜୀବନସାଥୀ ପ୍ରତ୍ୟାଶା'},
+  ur:{n:'اردو',rtl:true,p:'ذاتی تفصیلات',r:'مذہبی تفصیلات',e:'تعلیم اور پیشہ',f:'خاندانی تفصیلات',c:'رابطہ تفصیلات',
+    name:'نام',dob:'تاریخ پیدائش',tob:'وقت پیدائش',pob:'جائے پیدائش',height:'قد',weight:'وزن',
+    blood:'بلڈ گروپ',complexion:'رنگت',marital:'ازدواجی حیثیت',diet:'خوراک',tongue:'مادری زبان',hobbies:'مشاغل',
+    religion:'مذہب',caste:'ذات',subcaste:'ذیلی ذات',gotra:'گوتر',rashi:'راشی',nakshatra:'نکشتر',manglik:'منگلک',
+    education:'تعلیم',occupation:'پیشہ',company:'ادارہ',income:'سالانہ آمدنی',workplace:'مقام کار',
+    father:'والد کا نام',fatherocc:'والد کا پیشہ',mother:'والدہ کا نام',motherocc:'والدہ کا پیشہ',
+    siblings:'بہن / بھائی',native:'آبائی علاقہ',ftype:'خاندان کی قسم',
+    person:'رابطہ کار',phone:'فون',email:'ای میل',address:'پتہ',about:'میرے بارے میں',partner:'شریکِ حیات سے توقعات'}
+};
+
+/* Faith symbols, drawn here rather than copied. Competing sites ship
+   dozens of downloaded deity illustrations; those are usually somebody's
+   copyrighted artwork. These are simple, respectful line forms of symbols
+   that are themselves ancient and uncopyrightable. */
+var SYMBOLS = {
+  none:{ n:'None', d:null },
+  om:{ n:'Om', d:'<text x="50" y="72" font-size="72" text-anchor="middle" font-family="Noto Sans, sans-serif" fill="CC">ॐ</text>' },
+  ganeshtext:{ n:'Ganeshay', d:'<text x="50" y="44" font-size="26" text-anchor="middle" font-family="Noto Sans, sans-serif" fill="CC">श्री</text><text x="50" y="76" font-size="22" text-anchor="middle" font-family="Noto Sans, sans-serif" fill="CC">गणेश</text>' },
+  swastik:{ n:'Swastik', d:'<g fill="none" stroke="CC" stroke-width="7" stroke-linecap="square"><path d="M50 18v64M18 50h64M50 18h-22M50 82h22M18 50v22M82 50v-22"/></g><circle cx="30" cy="34" r="3" fill="CC"/><circle cx="70" cy="34" r="3" fill="CC"/><circle cx="30" cy="66" r="3" fill="CC"/><circle cx="70" cy="66" r="3" fill="CC"/>' },
+  ekonkar:{ n:'Ek Onkar', d:'<text x="50" y="74" font-size="64" text-anchor="middle" font-family="Noto Sans, sans-serif" fill="CC">ੴ</text>' },
+  khanda:{ n:'Khanda', d:'<g fill="none" stroke="CC" stroke-width="5"><circle cx="50" cy="52" r="20"/><path d="M50 14v76"/><path d="M28 26 C 14 44 14 62 28 78"/><path d="M72 26 C 86 44 86 62 72 78"/></g>' },
+  crescent:{ n:'Crescent', d:'<path d="M62 16 A 36 36 0 1 0 62 84 A 29 29 0 1 1 62 16 Z" fill="CC"/><path d="M74 38l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="CC"/>' },
+  bismillah:{ n:'Bismillah', d:'<text x="50" y="62" font-size="26" text-anchor="middle" font-family="Noto Sans, sans-serif" fill="CC">بِسْمِ اللهِ</text>' },
+  cross:{ n:'Cross', d:'<g fill="none" stroke="CC" stroke-width="8" stroke-linecap="round"><path d="M50 14v72M26 38h48"/></g>' },
+  chakra:{ n:'Dharma wheel', d:'<g fill="none" stroke="CC" stroke-width="4"><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="8"/>' +
+    [0,45,90,135].map(function(a){ return '<path d="M50 16 V84" transform="rotate('+a+' 50 50)"/>'; }).join('') + '</g>' },
+  ahimsa:{ n:'Ahimsa', d:'<path d="M34 88 V52 c0-6 8-6 8 0 v-6 c0-7 9-7 9 0 v4 c0-7 9-7 9 0 v6 c0-6 8-6 8 0 v22 c0 8-6 10-12 10z" fill="none" stroke="CC" stroke-width="4"/><circle cx="50" cy="66" r="7" fill="none" stroke="CC" stroke-width="3"/>' },
+  kalash2:{ n:'Kalash', d:'<path d="M32 44 C 22 62 24 82 50 92 C 76 82 78 62 68 44 Z" fill="none" stroke="CC" stroke-width="4"/><rect x="28" y="34" width="44" height="10" rx="4" fill="none" stroke="CC" stroke-width="4"/><circle cx="50" cy="18" r="9" fill="none" stroke="CC" stroke-width="4"/>' }
+};
+function symbolSvg(key, color, size){
+  var sy = SYMBOLS[key]; if(!sy || !sy.d) return '';
+  return '<svg viewBox="0 0 100 100" width="'+size+'" height="'+size+'" xmlns="http://www.w3.org/2000/svg">' +
+    sy.d.replace(/CC/g, color) + '</svg>';
+}
+
+var HEADERS = [['','(none)'],['ॐ','ॐ'],['॥ श्री गणेशाय नमः ॥','॥ श्री गणेशाय नमः ॥'],
+  ['ॐ श्री गुरुभ्यो नमः','ॐ श्री गुरुभ्यो नमः'],['ੴ ਸਤਿ ਨਾਮੁ','ੴ ਸਤਿ ਨਾਮੁ'],
+  ['بِسْمِ اللهِ','بِسْمِ اللهِ'],['✝','✝'],['卐','卐']];
+
+var THEMES = {
+  gold:   {n:'Classic gold',   bg:'#FFFDF6', ink:'#3A2E12', ac:'#B8860B', ru:'#E4D3A2', hd:'Georgia,serif', bd:'double'},
+  maroon: {n:'Royal maroon',   bg:'#FFF8F8', ink:'#3A1620', ac:'#8E1B34', ru:'#E8C4CD', hd:'Georgia,serif', bd:'double'},
+  green:  {n:'Temple green',   bg:'#F7FBF7', ink:'#12291D', ac:'#1E6B4A', ru:'#BFDFCC', hd:'Georgia,serif', bd:'double'},
+  indigo: {n:'Deep indigo',    bg:'#F8F9FD', ink:'#161B33', ac:'#2E3B7D', ru:'#C6CDE8', hd:'Georgia,serif', bd:'solid'},
+  rose:   {n:'Soft rose',      bg:'#FFF9FB', ink:'#3A2029', ac:'#B24A6B', ru:'#F0CEDA', hd:'Georgia,serif', bd:'solid'},
+  minimal:{n:'Modern minimal', bg:'#FFFFFF', ink:'#151515', ac:'#222222', ru:'#DDDDDD', hd:'system-ui,sans-serif', bd:'solid'}
+};
+
+/* ── decorative backgrounds ────────────────────────────────────────────
+   Every motif below is drawn from scratch as SVG: no copyright issue, a
+   few hundred bytes each, and razor sharp at any print size. Photographs
+   of deities found online are almost always someone's copyrighted work,
+   so instead there is an upload slot for an image the user owns.
+   ──────────────────────────────────────────────────────────────────── */
+function svgURI(inner, w, h){
+  /* encodeURIComponent leaves ( ) ' and ! alone, and those characters break
+     out of a CSS url(...) — which silently killed several motif previews.
+     Encode them by hand. */
+  var body = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + w + ' ' + h + '">' + inner + '</svg>';
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(body)
+    .replace(/\(/g, '%28').replace(/\)/g, '%29')
+    .replace(/'/g, '%27').replace(/!/g, '%21');
+}
+var MOTIFS = {
+  none: { n:'None', build:function(){ return null; } },
+
+  mandala: { n:'Mandala', build:function(c){
+    var p = '';
+    for(var i=0;i<16;i++){
+      p += '<path d="M100 100 C 84 62 116 62 100 16 C 116 62 84 62 100 100 Z" fill="'+c+'" transform="rotate('+(i*22.5)+' 100 100)"/>';
+    }
+    for(var j=0;j<12;j++){
+      p += '<path d="M100 100 C 92 78 108 78 100 52 C 108 78 92 78 100 100 Z" fill="'+c+'" transform="rotate('+(j*30+15)+' 100 100)"/>';
+    }
+    p += '<circle cx="100" cy="100" r="14" fill="none" stroke="'+c+'" stroke-width="3"/>';
+    p += '<circle cx="100" cy="100" r="6" fill="'+c+'"/>';
+    p += '<circle cx="100" cy="100" r="88" fill="none" stroke="'+c+'" stroke-width="2"/>';
+    p += '<circle cx="100" cy="100" r="94" fill="none" stroke="'+c+'" stroke-width="1"/>';
+    return { uri:svgURI(p,200,200), size:'62%', pos:'center', repeat:'no-repeat' };
+  }},
+
+  lotus: { n:'Lotus', build:function(c){
+    var p = '';
+    [-70,-45,-22,0,22,45,70].forEach(function(a,i){
+      var h = i===3 ? 96 : (Math.abs(a)>50 ? 58 : 78);
+      p += '<path d="M100 160 C '+(100-22)+' '+(160-h*0.6)+' '+(100-10)+' '+(160-h)+' 100 '+(160-h)+
+           ' C '+(100+10)+' '+(160-h)+' '+(100+22)+' '+(160-h*0.6)+' 100 160 Z" fill="'+c+
+           '" transform="rotate('+a+' 100 160)"/>';
+    });
+    p += '<ellipse cx="100" cy="162" rx="34" ry="9" fill="'+c+'"/>';
+    return { uri:svgURI(p,200,200), size:'54%', pos:'center', repeat:'no-repeat' };
+  }},
+
+  kalash: { n:'Kalash', build:function(c){
+    var p = '<path d="M74 92 C 62 116 64 150 100 166 C 136 150 138 116 126 92 Z" fill="none" stroke="'+c+'" stroke-width="4"/>' +
+      '<rect x="68" y="80" width="64" height="13" rx="5" fill="none" stroke="'+c+'" stroke-width="4"/>' +
+      '<path d="M84 80 C 86 66 114 66 116 80" fill="none" stroke="'+c+'" stroke-width="3"/>' +
+      '<circle cx="100" cy="56" r="13" fill="none" stroke="'+c+'" stroke-width="4"/>' +
+      '<path d="M100 44 C 92 30 84 26 78 30 C 86 34 92 40 96 48 Z" fill="'+c+'"/>' +
+      '<path d="M100 44 C 108 30 116 26 122 30 C 114 34 108 40 104 48 Z" fill="'+c+'"/>' +
+      '<path d="M100 44 C 100 30 100 24 100 20" fill="none" stroke="'+c+'" stroke-width="3"/>' +
+      '<path d="M80 120 h40 M84 134 h32" stroke="'+c+'" stroke-width="2.5" opacity=".7"/>';
+    return { uri:svgURI(p,200,200), size:'46%', pos:'center', repeat:'no-repeat' };
+  }},
+
+  diya: { n:'Diya', build:function(c){
+    var p = '<path d="M46 118 C 60 146 140 146 154 118 Z" fill="none" stroke="'+c+'" stroke-width="4"/>' +
+      '<path d="M46 118 h108" stroke="'+c+'" stroke-width="4"/>' +
+      '<path d="M100 112 C 88 96 92 82 100 66 C 110 82 114 98 100 112 Z" fill="'+c+'"/>' +
+      '<path d="M100 104 C 95 94 97 88 100 80 C 104 89 105 97 100 104 Z" fill="#fff" opacity=".45"/>' +
+      '<path d="M62 152 h76" stroke="'+c+'" stroke-width="3" opacity=".6"/>';
+    return { uri:svgURI(p,200,200), size:'46%', pos:'center', repeat:'no-repeat' };
+  }},
+
+  arch: { n:'Temple arch', build:function(c){
+    var p = '<path d="M22 190 V96 C 22 52 56 20 100 20 C 144 20 178 52 178 96 V190" fill="none" stroke="'+c+'" stroke-width="4"/>' +
+      '<path d="M40 190 V98 C 40 62 66 38 100 38 C 134 38 160 62 160 98 V190" fill="none" stroke="'+c+'" stroke-width="2"/>' +
+      '<path d="M100 20 V6 M92 12 h16" stroke="'+c+'" stroke-width="3"/>' +
+      '<circle cx="100" cy="96" r="9" fill="none" stroke="'+c+'" stroke-width="2.5"/>';
+    return { uri:svgURI(p,200,200), size:'58%', pos:'center 42%', repeat:'no-repeat' };
+  }},
+
+  paisley: { n:'Paisley corners', build:function(c){
+    var p = '<path d="M12 92 C 12 44 44 12 88 12 C 66 30 58 46 58 62 C 58 78 70 88 84 88 C 70 96 40 100 12 92 Z" fill="none" stroke="'+c+'" stroke-width="3"/>' +
+      '<circle cx="46" cy="52" r="5" fill="'+c+'"/>' +
+      '<path d="M24 76 C 34 66 46 62 58 62" fill="none" stroke="'+c+'" stroke-width="1.6" opacity=".7"/>';
+    return { uri:svgURI(p,100,100), size:'108px', pos:'top left, top right, bottom left, bottom right',
+             repeat:'no-repeat', corners:true };
+  }},
+
+  star: { n:'Geometric star', build:function(c){
+    var p = '<g fill="none" stroke="'+c+'" stroke-width="2.5">' +
+      '<rect x="34" y="34" width="92" height="92"/>' +
+      '<rect x="34" y="34" width="92" height="92" transform="rotate(45 80 80)"/>' +
+      '<circle cx="80" cy="80" r="46"/><circle cx="80" cy="80" r="18"/></g>';
+    return { uri:svgURI(p,160,160), size:'150px', pos:'center', repeat:'repeat' };
+  }},
+
+  vine: { n:'Border vine', build:function(c){
+    var p = '<path d="M0 30 C 15 10 35 50 50 30 C 65 10 85 50 100 30" fill="none" stroke="'+c+'" stroke-width="2.5"/>' +
+      '<circle cx="25" cy="22" r="3.5" fill="'+c+'"/><circle cx="75" cy="22" r="3.5" fill="'+c+'"/>' +
+      '<circle cx="50" cy="38" r="3" fill="'+c+'"/>';
+    return { uri:svgURI(p,100,60), size:'104px', pos:'top center, bottom center', repeat:'repeat-x', band:true };
+  }},
+
+  crucifix: { n:'Catholic cross', build:function(c){
+    var p = '<g fill="none" stroke="'+c+'" stroke-width="5" stroke-linecap="round">' +
+      '<path d="M100 26 V172"/><path d="M56 74 H144"/></g>' +
+      '<g fill="'+c+'">' +
+        '<circle cx="100" cy="26" r="6"/><circle cx="56" cy="74" r="6"/>' +
+        '<circle cx="144" cy="74" r="6"/><circle cx="100" cy="172" r="6"/>' +
+      '</g>' +
+      '<circle cx="100" cy="74" r="15" fill="none" stroke="'+c+'" stroke-width="2.5"/>' +
+      '<path d="M84 100 q16 10 32 0" fill="none" stroke="'+c+'" stroke-width="2" opacity=".7"/>';
+    return { uri:svgURI(p,200,200), size:'52%', pos:'center', repeat:'no-repeat' };
+  }},
+
+  rosary: { n:'Rosary border', build:function(c){
+    var p = '';
+    for(var i=0;i<10;i++) p += '<circle cx="'+(6+i*10)+'" cy="20" r="3" fill="'+c+'"/>';
+    p += '<path d="M0 20 H100" stroke="'+c+'" stroke-width="1.2" opacity=".6"/>';
+    return { uri:svgURI(p,100,40), size:'100px', pos:'top center, bottom center', repeat:'repeat-x', band:true };
+  }},
+
+  glyph: { n:'Blessing symbol, large', build:function(c, glyph){
+    var g = (glyph || 'ॐ').slice(0, 2);
+    var p = '<text x="100" y="128" font-size="120" text-anchor="middle" fill="' + c +
+      '" font-family="Noto Sans, system-ui, sans-serif">' + g.replace(/[<>&]/g,'') + '</text>';
+    return { uri:svgURI(p,200,200), size:'50%', pos:'center', repeat:'no-repeat' };
+  }}
+};
+
+/* four extra designs, so there is a look for every kind of family */
+THEMES.saffron = {n:'Marigold',      bg:'#FFFBF0', ink:'#3B2708', ac:'#C1671A', ru:'#EFD4A6', hd:'Georgia,serif', bd:'double'};
+THEMES.peacock = {n:'Peacock',       bg:'#F5FBFB', ink:'#0E2A2C', ac:'#0F6E77', ru:'#B9DEE0', hd:'Georgia,serif', bd:'double'};
+THEMES.ivory   = {n:'Ivory & ink',   bg:'#FCFBF7', ink:'#1C1B18', ac:'#6B6350', ru:'#DFDACB', hd:'Georgia,serif', bd:'solid'};
+THEMES.night   = {n:'Midnight gold', bg:'#191621', ink:'#EDE7DA', ac:'#D4A03C', ru:'#4A4056', hd:'Georgia,serif', bd:'double'};
+THEMES.rose2   = {n:'Blush pink',    bg:'#FFF7F9', ink:'#3B1E2A', ac:'#C2456F', ru:'#F5CBD9', hd:'Georgia,serif', bd:'double'};
+THEMES.sky     = {n:'Sky blue',      bg:'#F6FAFF', ink:'#12233A', ac:'#1F5FA8', ru:'#C2D8F0', hd:'Georgia,serif', bd:'solid'};
+THEMES.plum    = {n:'Royal plum',    bg:'#FBF7FD', ink:'#2A1533', ac:'#6B2E8F', ru:'#DCC8E8', hd:'Georgia,serif', bd:'double'};
+THEMES.olive   = {n:'Olive & cream', bg:'#FBFAF3', ink:'#23260F', ac:'#5C6B1E', ru:'#D6DCB4', hd:'Georgia,serif', bd:'solid'};
+THEMES.copper  = {n:'Copper',        bg:'#FFFAF6', ink:'#331D10', ac:'#A85A22', ru:'#EFCFB4', hd:'Georgia,serif', bd:'double'};
+THEMES.slate   = {n:'Slate grey',    bg:'#F8F9FA', ink:'#1B1F24', ac:'#44515E', ru:'#D2D9DF', hd:'system-ui,sans-serif', bd:'solid'};
+THEMES.emerald = {n:'Emerald',       bg:'#F4FBF8', ink:'#0C2620', ac:'#0B7A5C', ru:'#B7E0D2', hd:'Georgia,serif', bd:'double'};
+THEMES.wine    = {n:'Wine',          bg:'#FDF7F8', ink:'#2E0F17', ac:'#7A1128', ru:'#E7C3CB', hd:'Georgia,serif', bd:'double'};
+THEMES.charcoal= {n:'Charcoal card', bg:'#22242A', ink:'#E8EAEE', ac:'#9BB4D4', ru:'#454A55', hd:'Georgia,serif', bd:'solid'};
+
+/* ── Roman → Indic transliteration ──────────────────────────────────────
+   People type "Aarav Sharma" on a QWERTY keyboard and want आरव शर्मा.
+   That is transliteration (same sounds, different script), NOT translation
+   — you never translate a person's name or a gotra.
+
+   Competing sites call an online service for this. Doing it here in plain
+   JavaScript keeps the promise that nothing leaves the device, and works
+   with no signal at all.
+
+   All nine Indic scripts below share the same layout inherited from ISCII,
+   so one Devanagari table plus a codepoint offset covers them. Tamil has
+   far fewer letters, so voiced and aspirated sounds fold onto the nearest
+   Tamil letter.
+   ──────────────────────────────────────────────────────────────────── */
+
+/* Romanised Indian spelling is genuinely ambiguous — "a" is both अ and आ,
+   "d" is both द and ड. Rules alone give रजेश for Rajesh. A short list of
+   the commonest names and cities fixes most of what people actually type;
+   everything else falls through to the rules. */
+var TR_DICT = {
+  // first names
+  rajesh:'राजेश', ramesh:'रमेश', suresh:'सुरेश', mahesh:'महेश', ganesh:'गणेश',
+  rakesh:'राकेश', dinesh:'दिनेश', mukesh:'मुकेश', naresh:'नरेश', umesh:'उमेश',
+  amit:'अमित', sumit:'सुमित', rohit:'रोहित', mohit:'मोहित', ajay:'अजय',
+  vijay:'विजय', sanjay:'संजय', akash:'आकाश', vikas:'विकास', nikhil:'निखिल',
+  aarav:'आरव', arjun:'अर्जुन', aditya:'आदित्य', rahul:'राहुल', rohan:'रोहन',
+  karan:'करण', varun:'वरुण', kunal:'कुणाल', sachin:'सचिन', nitin:'नितीन',
+  priya:'प्रिया', pooja:'पूजा', neha:'नेहा', sneha:'स्नेहा', kavita:'कविता',
+  sunita:'सुनीता', anita:'अनिता', shweta:'श्वेता', deepa:'दीपा', meera:'मीरा',
+  radha:'राधा', sita:'सीता', geeta:'गीता', lata:'लता', asha:'आशा',
+  ananya:'अनन्या', ishita:'ईशिता', riya:'रिया', diya:'दिया', aditi:'अदिती',
+  // surnames
+  sharma:'शर्मा', verma:'वर्मा', gupta:'गुप्ता', patel:'पटेल', shah:'शाह',
+  kumar:'कुमार', singh:'सिंह', yadav:'यादव', joshi:'जोशी', desai:'देसाई',
+  kulkarni:'कुलकर्णी', deshpande:'देशपांडे', patil:'पाटील', jadhav:'जाधव',
+  shinde:'शिंदे', pawar:'पवार', more:'मोरे', gaikwad:'गायकवाड', bhosale:'भोसले',
+  chavan:'चव्हाण', naik:'नाईक', rao:'राव', reddy:'रेड्डी', nair:'नायर',
+  menon:'मेनन', iyer:'अय्यर', pillai:'पिल्लई', banerjee:'बॅनर्जी', mukherjee:'मुखर्जी',
+  chatterjee:'चॅटर्जी', bose:'बोस', das:'दास', roy:'रॉय', ghosh:'घोष',
+  // cities and places
+  mumbai:'मुंबई', pune:'पुणे', nashik:'नाशिक', nagpur:'नागपूर', thane:'ठाणे',
+  delhi:'दिल्ली', kolkata:'कोलकाता', chennai:'चेन्नई', bengaluru:'बेंगळुरू',
+  bangalore:'बंगळुरू', hyderabad:'हैदराबाद', ahmedabad:'अहमदाबाद', surat:'सुरत',
+  jaipur:'जयपूर', lucknow:'लखनऊ', kanpur:'कानपूर', indore:'इंदूर', bhopal:'भोपाळ',
+  patna:'पाटणा', kochi:'कोची', kothrud:'कोथरूड', andheri:'अंधेरी', dadar:'दादर',
+  borivali:'बोरिवली', kalyan:'कल्याण', satara:'सातारा', kolhapur:'कोल्हापूर',
+  solapur:'सोलापूर', aurangabad:'औरंगाबाद', amravati:'अमरावती', latur:'लातूर',
+  // common words on a biodata
+  hindu:'हिंदू', muslim:'मुस्लिम', sikh:'शीख', jain:'जैन', christian:'ख्रिश्चन',
+  brahmin:'ब्राह्मण', maratha:'मराठा', engineer:'इंजिनियर', doctor:'डॉक्टर',
+  teacher:'शिक्षक', manager:'मॅनेजर', accountant:'अकाउंटंट', business:'व्यवसाय',
+  vegetarian:'शाकाहारी', married:'विवाहित', unmarried:'अविवाहित',
+  shri:'श्री', smt:'सौ', kum:'कु'
+};
+
+var DEVA = {
+  ind:{ a:'अ', aa:'आ', i:'इ', ii:'ई', u:'उ', uu:'ऊ', ri:'ऋ', e:'ए', ai:'ऐ', o:'ओ', au:'औ' },
+  mat:{ a:'',  aa:'ा', i:'ि', ii:'ी', u:'ु', uu:'ू', ri:'ृ', e:'े', ai:'ै', o:'ो', au:'ौ' },
+  con:{ k:'क', kh:'ख', g:'ग', gh:'घ', ng:'ङ',
+        ch:'च', chh:'छ', j:'ज', jh:'झ', ny:'ञ',
+        tt:'ट', tth:'ठ', dd:'ड', ddh:'ढ', nn:'ण',
+        t:'त', th:'थ', d:'द', dh:'ध', n:'न',
+        p:'प', ph:'फ', f:'फ', b:'ब', bh:'भ', m:'म',
+        y:'य', r:'र', l:'ल', v:'व', w:'व',
+        sh:'श', ss:'ष', s:'स', h:'ह', ksh:'क्ष', gy:'ज्ञ', z:'ज़' },
+  vir:'्', anu:'ं'
+};
+/* longest-first so "chh" beats "ch", "aa" beats "a" */
+var TR_KEYS = (function(){
+  var k = Object.keys(DEVA.con).concat(Object.keys(DEVA.ind));
+  return k.sort(function(a,b){ return b.length - a.length; });
+})();
+
+var SCRIPT_BASE = { hi:0x0900, mr:0x0900, bn:0x0980, pa:0x0A00, gu:0x0A80,
+                    or:0x0B00, ta:0x0B80, te:0x0C00, kn:0x0C80, ml:0x0D00 };
+/* Tamil has no separate voiced or aspirated consonants — fold them */
+var TAMIL_FOLD = { 'ख':'க','ग':'க','घ':'க','क':'க',
+  'छ':'ச','ज':'ச','झ':'ச','च':'ச','ज़':'ஜ',
+  'ठ':'ட','ड':'ட','ढ':'ட','ट':'ட',
+  'थ':'த','द':'த','ध':'த','त':'த',
+  'फ':'ப','ब':'ப','भ':'ப','प':'ப',
+  'श':'ஶ','ष':'ஷ','स':'ஸ','ह':'ஹ' };
+
+function toScript(devaChar, lang){
+  var base = SCRIPT_BASE[lang];
+  if(!base) return devaChar;
+  if(lang === 'ta' && TAMIL_FOLD[devaChar]) return TAMIL_FOLD[devaChar];
+  var out = '';
+  for(var i=0;i<devaChar.length;i++){
+    var c = devaChar.charCodeAt(i);
+    if(c >= 0x0900 && c <= 0x097F){
+      var mapped = String.fromCharCode(c - 0x0900 + base);
+      /* if the target script has no such letter, keep the sound closest */
+      out += mapped;
+    } else out += devaChar[i];
+  }
+  return out;
+}
+
+/* one word at a time */
+function translitWord(word, lang){
+  if(!word) return word;
+  var hit = TR_DICT[word.toLowerCase()];
+  if(hit) return toScript(hit, lang);
+  var s = word.toLowerCase(), out = '', i = 0, lastWasCon = false;
+  function push(ch){ out += toScript(ch, lang); }
+
+  while(i < s.length){
+    var m = null;
+    for(var t=0; t<TR_KEYS.length; t++){
+      var key = TR_KEYS[t];
+      if(s.substr(i, key.length) === key){ m = key; break; }
+    }
+    if(!m){
+      /* not a sound we know — keep the character as typed */
+      out += word[i]; i++; lastWasCon = false; continue;
+    }
+    var atEnd = (i + m.length >= s.length);
+
+    if(DEVA.con[m]){
+      if(lastWasCon) push(DEVA.vir);        /* cluster: kill the inherent a */
+      push(DEVA.con[m]);
+      lastWasCon = true;
+      i += m.length;
+      /* a bare final consonant keeps its inherent vowel, as names usually do */
+      continue;
+    }
+    /* a vowel */
+    if(lastWasCon){
+      var mat = DEVA.mat[m];
+      /* a word-final "a" in a romanised Indian name is almost always long:
+         Sharma → शर्मा, not शर्म */
+      if(m === 'a' && atEnd) mat = DEVA.mat.aa;
+      if(mat) push(mat);
+    } else {
+      push(DEVA.ind[m]);
+    }
+    lastWasCon = false;
+    i += m.length;
+  }
+  return out;
+}
+
+function transliterate(text, lang){
+  if(!text || !SCRIPT_BASE[lang]) return text;
+  /* leave anything already in a non-Latin script, and digits/punctuation, alone */
+  return text.replace(/[A-Za-z]+/g, function(w){ return translitWord(w, lang); });
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   ADVERTISING — off by default. Two modes:
+
+   mode:'text'    A plain sponsor line you write yourself. No network call,
+                  no tracking, no approval needed. Works from day one and
+                  keeps the privacy promise completely intact. Start here.
+
+   mode:'adsense' Google AdSense. Needs approval and a paid domain, and it
+                  IS a tracking network — switching it on means the privacy
+                  page must be updated to say so (run build.js with ADS=1).
+
+   Slots sit after the design gallery and near the foot of the guide. They
+   deliberately never appear beside the form or the preview: people are
+   entering a photograph, a birth time and a phone number there, and an ad
+   next to that reads as untrustworthy at exactly the wrong moment.
+   ══════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════════════
+   ANALYTICS — paste your Cloudflare Web Analytics token between the quotes
+   and it switches on. Nothing else to change.
+
+   Cloudflare's is used rather than Google Analytics because it sets no
+   cookies and collects no personal data, so the privacy promise on this
+   site stays true. Get a token free at:
+       dash.cloudflare.com → Analytics & Logs → Web Analytics → Add a site
+   ══════════════════════════════════════════════════════════════════════ */
+var ANALYTICS_TOKEN = '';
+if(ANALYTICS_TOKEN){
+  var an = document.createElement('script');
+  an.defer = true;
+  an.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  an.setAttribute('data-cf-beacon', '{"token":"' + ANALYTICS_TOKEN + '"}');
+  document.head.appendChild(an);
+}
+
+var ADS = {
+  enabled:false,
+  mode:'text',
+  client:'ca-pub-XXXXXXXXXXXXXXXX',
+  slot:'',
+  text:{
+    label:'Sponsored',
+    title:'Your sponsor line here',
+    body:'One or two honest sentences about a wedding photographer, printer or venue you would actually recommend.',
+    cta:'Find out more',
+    url:'#'
+  }
+};
+function adSlot(where){
+  if(!ADS.enabled) return '';
+  if(ADS.mode === 'adsense'){
+    if(!ADS.client || /X{4,}/.test(ADS.client)) return '';
+    return '<div class="ad" data-where="'+where+'"><span class="ad-lbl">Advertisement</span>' +
+      '<ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client+
+      '" data-ad-slot="'+ADS.slot+'" data-ad-format="auto" data-full-width-responsive="true"></ins></div>';
+  }
+  var t = ADS.text;
+  return '<div class="ad ad-text" data-where="'+where+'">' +
+    '<span class="ad-lbl">'+esc(t.label)+'</span>' +
+    '<a href="'+esc(t.url)+'" rel="sponsored nofollow noopener" target="_blank">' +
+      '<b>'+esc(t.title)+'</b><span>'+esc(t.body)+'</span>' +
+      '<em>'+esc(t.cta)+' →</em></a></div>';
+}
+function pushAds(){
+  if(!ADS.enabled || ADS.mode !== 'adsense') return;
+  try{
+    $$('.adsbygoogle').forEach(function(){ (window.adsbygoogle = window.adsbygoogle || []).push({}); });
+  }catch(e){}
+}
+
+/* ── named designs ──────────────────────────────────────────────────────
+   Each is a real combination of the settings below, so what you see in the
+   gallery is literally what the sheet renderer produces — no fake artwork.
+   ──────────────────────────────────────────────────────────────────── */
+var TEMPLATES = [
+  { n:'Kumkum',    theme:'maroon',  motif:'mandala',  hstyle:'plain',   border:'double', symbol:'om' },
+  { n:'Chandan',   theme:'gold',    motif:'paisley',  hstyle:'rule',    border:'double', symbol:'ganeshtext' },
+  { n:'Marigold',  theme:'saffron', motif:'vine',     hstyle:'center',  border:'solid',  symbol:'none' },
+  { n:'Sindoor',   theme:'wine',    motif:'kalash',   hstyle:'band',    border:'double', symbol:'om' },
+  { n:'Mayur',     theme:'peacock', motif:'lotus',    hstyle:'band',    border:'double', symbol:'none' },
+  { n:'Moti',      theme:'ivory',   motif:'none',     hstyle:'plain',   border:'solid',  symbol:'om' },
+  { n:'Kesar',     theme:'copper',  motif:'arch',     hstyle:'plain',   border:'solid',  symbol:'kalash2' },
+  { n:'Bandhani',  theme:'saffron', motif:'star',     hstyle:'rule',    border:'double', symbol:'swastik' },
+  { n:'Ivory',     theme:'minimal', motif:'none',     hstyle:'minimal', border:'solid',  symbol:'none' },
+  { n:'Slate',     theme:'slate',   motif:'none',     hstyle:'rule',    border:'solid',  symbol:'none' },
+  { n:'Filigree',  theme:'sky',     motif:'paisley',  hstyle:'plain',   border:'double', symbol:'none' },
+  { n:'Gulaab',    theme:'rose2',   motif:'lotus',    hstyle:'center',  border:'solid',  symbol:'none' },
+  { n:'Mandap',    theme:'emerald', motif:'arch',     hstyle:'band',    border:'double', symbol:'kalash2' },
+  { n:'Aparajita', theme:'plum',    motif:'mandala',  hstyle:'plain',   border:'solid',  symbol:'om' },
+  { n:'Raat Rani', theme:'night',   motif:'mandala',  hstyle:'center',  border:'double', symbol:'om' },
+  { n:'Zari',      theme:'gold',    motif:'vine',     hstyle:'rule',    border:'double', symbol:'ganeshtext' },
+  { n:'Paisley',   theme:'green',   motif:'paisley',  hstyle:'plain',   border:'double', symbol:'none' },
+  { n:'Neelam',    theme:'indigo',  motif:'star',     hstyle:'band',    border:'solid',  symbol:'none' },
+  { n:'Toran',     theme:'olive',   motif:'vine',     hstyle:'plain',   border:'solid',  symbol:'none' },
+  { n:'Aangan',    theme:'charcoal',motif:'none',     hstyle:'minimal', border:'solid',  symbol:'none' },
+  { n:'Cross',     theme:'sky',     motif:'crucifix', hstyle:'center',  border:'solid',  symbol:'cross' }
+];
+
+/* ── state ─────────────────────────────────────────────────────────── */
+var S = { lang:'en', theme:'gold', head:0, fmt:'in', pshape:'12px', ppos:'right',
+          motif:'none', mopacity:10, bgimg:'', border:'double',
+          photoRaw:'', crop:{x:0,y:0,z:100},
+          layout:'single', density:'normal', font:'serif', hstyle:'plain', zoom:'fit',
+          order:null, removed:{}, symbol:'none',
+          vals:{}, labels:{}, custom:[], photo:'', about:'', partner:'', step:'p' };
+
+function initOrder(){
+  if(S.order) return;
+  S.order = {};
+  SECTIONS.forEach(function(sec){
+    S.order[sec] = FIELDS.filter(function(f){ return f[1] === sec; }).map(function(f){ return f[0]; });
+  });
+}
+function moveField(sec, key, dir){
+  var a = S.order[sec], i = a.indexOf(key);
+  var j = i + dir;
+  if(i < 0 || j < 0 || j >= a.length) return;
+  a.splice(j, 0, a.splice(i, 1)[0]);
+}
+
+function L(k){
+  if(S.labels[k] !== undefined) return S.labels[k];
+  return (LANG[S.lang] && LANG[S.lang][k]) || LANG.en[k] || k;
+}
+function showSec(sec){ return !(S.fmt === 'world' && sec === 'r'); }
+
+/* ── draft saving ──────────────────────────────────────────────────── */
+var KEY = 'biodata:draft', BAK = 'biodata:backup';
+function save(){
+  try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){}
+}
+/* Clearing used to overwrite the autosave a moment later, destroying the
+   draft for good. The pre-clear state is stashed here first, and Restore
+   falls back to it, so a mis-click is always recoverable. */
+function stash(){
+  try{ var cur = localStorage.getItem(KEY); if(cur) localStorage.setItem(BAK, cur); }catch(e){}
+}
+function isEmpty(d){
+  return !d || (!Object.keys(d.vals||{}).some(function(k){ return (d.vals[k]||'').trim(); })
+    && !(d.about||'').trim() && !(d.partner||'').trim());
+}
+function load(){
+  try{
+    var main = JSON.parse(localStorage.getItem(KEY) || 'null');
+    var bak  = JSON.parse(localStorage.getItem(BAK) || 'null');
+    var d = isEmpty(main) ? bak : main;
+    if(isEmpty(d)) return false;
+    Object.keys(d).forEach(function(k){ S[k] = d[k]; });
+    return true;
+  }catch(e){ return false; }
+}
+
+/* ── the form ──────────────────────────────────────────────────────── */
+function drawSteps(){
+  var secs = SECTIONS.filter(showSec);
+  $('#steps').innerHTML = secs.map(function(s,i){
+    return '<button class="step" data-s="'+s+'" aria-current="'+(S.step===s)+'">' +
+      '<span class="n">'+(i+1)+'</span>'+STEPNAMES[s]+'</button>';
+  }).join('') +
+  '<button class="step" data-s="x" aria-current="'+(S.step==='x')+'"><span class="n">'+(secs.length+1)+'</span>Extra</button>';
+}
+function drawForm(){
+  var html = '';
+  if(S.step === 'x'){
+    html = '<div class="row"><label class="f" style="grid-column:1/-1"><span contenteditable="true" data-lab="about">'+esc(L('about'))+'</span>' +
+      '<textarea data-k="__about">'+esc(S.about)+'</textarea></label>' +
+      '<label class="f" style="grid-column:1/-1"><span contenteditable="true" data-lab="partner">'+esc(L('partner'))+'</span>' +
+      '<textarea data-k="__partner">'+esc(S.partner)+'</textarea></label></div>';
+    if(S.custom.length){
+      html += '<div class="row" style="margin-top:14px">' + S.custom.map(function(c,i){
+        return '<label class="f"><span contenteditable="true" data-cl="'+i+'">'+esc(c.label)+'</span>' +
+          '<input type="text" data-ck="'+i+'" value="'+esc(c.value)+'"></label>';
+      }).join('') + '</div>';
+    }
+  } else {
+    initOrder();
+    var keys = S.order[S.step].filter(function(k){ return !S.removed[k]; });
+    html = '<div class="row">' + keys.map(function(k, i){
+      return '<div class="f fwrap">' +
+        '<span class="frow">' +
+          '<span contenteditable="true" data-lab="'+k+'">'+esc(L(k))+'</span>' +
+          '<span class="fbtns">' +
+            '<button type="button" class="mini" data-mv="up" data-f="'+k+'" title="Move up"'+(i===0?' disabled':'')+'>↑</button>' +
+            '<button type="button" class="mini" data-mv="down" data-f="'+k+'" title="Move down"'+(i===keys.length-1?' disabled':'')+'>↓</button>' +
+            '<button type="button" class="mini" data-rm="'+k+'" title="Remove this field">✕</button>' +
+          '</span>' +
+        '</span>' +
+        '<input type="'+(FIELD_TYPE[k]||'text')+'" data-k="'+k+'" value="'+esc(S.vals[k]||'')+
+          '" placeholder="'+esc(PLACEHOLD[k]||'')+'"></div>';
+    }).join('') + '</div>';
+    var gone = S.order[S.step].filter(function(k){ return S.removed[k]; });
+    if(gone.length){
+      html += '<p class="hint">Removed from this section: ' + gone.map(function(k){
+        return '<button type="button" class="mini back" data-back="'+k+'">+ '+esc(L(k))+'</button>';
+      }).join(' ') + '</p>';
+    }
+  }
+  $('#form').innerHTML = html;
+}
+var trBackup = null;
+function drawTrBar(){
+  var bar = $('#trbar'); if(!bar) return;
+  if(!SCRIPT_BASE[S.lang]){
+    bar.innerHTML = S.lang === 'ur'
+      ? '<span class="hint" style="margin:0">Urdu uses a different script, so automatic conversion is not offered — please type directly in Urdu.</span>' : '';
+    return;
+  }
+  bar.innerHTML =
+    '<button class="btn ghost sm" id="trGo">Convert my typing to ' + esc(LANG[S.lang].n) + '</button>' +
+    (trBackup ? '<button class="btn ghost sm" id="trUndo">Undo conversion</button>' : '') +
+    '<span class="hint" style="align-self:center;margin:0">Type in English letters and press this. Always read the result — romanised spellings are a best guess.</span>';
+}
+function runTranslit(){
+  trBackup = { vals:Object.assign({}, S.vals), about:S.about, partner:S.partner,
+               custom:S.custom.map(function(c){ return {label:c.label, value:c.value}; }) };
+  Object.keys(S.vals).forEach(function(k){
+    if(FIELD_TYPE[k]) return;                  /* never touch dates or times */
+    S.vals[k] = transliterate(S.vals[k], S.lang);
+  });
+  S.about = transliterate(S.about, S.lang);
+  S.partner = transliterate(S.partner, S.lang);
+  S.custom.forEach(function(c){ c.value = transliterate(c.value, S.lang); });
+}
+function undoTranslit(){
+  if(!trBackup) return;
+  S.vals = trBackup.vals; S.about = trBackup.about;
+  S.partner = trBackup.partner; S.custom = trBackup.custom; trBackup = null;
+}
+function progress(){
+  var live = FIELDS.filter(function(f){ return showSec(f[1]) && !S.removed[f[0]]; });
+  var total = live.length || 1;
+  var done = live.filter(function(f){ return (S.vals[f[0]]||'').trim(); }).length;
+  var pct = Math.round(done/total*100);
+  $('#bar').style.width = pct + '%';
+  $('#prog').textContent = done === 0 ? 'Nothing filled in yet.'
+    : done + ' of ' + total + ' filled in. Blank fields are simply left out.';
+}
+
+/* ── the sheet ─────────────────────────────────────────────────────── */
+function bgLayer(t){
+  /* a user picture always wins over a drawn motif */
+  if(S.bgimg){
+    return '<div style="position:absolute;inset:0;opacity:' + (S.mopacity/100) +
+      ';background-image:url(' + S.bgimg + ');background-size:cover;background-position:center;' +
+      'background-repeat:no-repeat"></div>';
+  }
+  var m = MOTIFS[S.motif]; if(!m) return '';
+  var cfg = m.build(t.ac, HEADERS[S.head][0] || 'ॐ');
+  if(!cfg) return '';
+  var size = cfg.size, pos = cfg.pos, rep = cfg.repeat;
+  if(S.mplace === 'center'){ size = cfg.corners || cfg.band ? '46%' : size; pos = 'center'; rep = 'no-repeat'; }
+  else if(S.mplace === 'tile'){ size = '160px'; pos = 'top left'; rep = 'repeat'; }
+  else if(cfg.corners){ rep = 'no-repeat, no-repeat, no-repeat, no-repeat'; }
+  var img = cfg.corners
+    ? [ 'url('+cfg.uri+')',
+        'url('+cfg.uri+')',
+        'url('+cfg.uri+')',
+        'url('+cfg.uri+')' ].join(',')
+    : 'url(' + cfg.uri + ')';
+  var extra = cfg.corners
+    ? ';background-size:' + [size,size,size,size].join(',') +
+      ';transform:none'
+    : ';background-size:' + size;
+  return '<div style="position:absolute;inset:0;opacity:' + (S.mopacity/100) +
+    ';background-image:' + img + ';background-position:' + pos + ';background-repeat:' + rep + extra + '"></div>';
+}
+var DENSITY = {
+  tight:   { pad:26, fs:10.8, gap:8,  sec:11.5, name:20, row:2.5 },
+  compact: { pad:32, fs:11.8, gap:10, sec:12.3, name:23, row:3.5 },
+  normal:  { pad:42, fs:13,   gap:15, sec:13.5, name:26, row:5 },
+  roomy:   { pad:52, fs:14.2, gap:20, sec:14.5, name:29, row:7 },
+  airy:    { pad:62, fs:15.4, gap:26, sec:15.5, name:32, row:9 }
+};
+var A4H = 1123, A4W = 794;
+
+function sectionBlocks(t, d){
+  var out = [];
+  SECTIONS.forEach(function(sec){
+    if(!showSec(sec)) return;
+    var body = '';
+    initOrder();
+    S.order[sec].forEach(function(k){
+      if(S.removed[k]) return;
+      var v = shownValue(k, S.lang); if(!v) return;
+      body += '<tr><td style="padding:'+d.row+'px 12px '+d.row+'px 0;color:'+t.ac+
+        ';vertical-align:top;font-weight:600;width:'+(S.layout==='wide'?'52%':S.layout==='narrow'?'30%':'40%')+'">'+esc(L(k))+
+        '</td><td style="padding:'+d.row+'px 0;vertical-align:top">'+esc(v)+'</td></tr>';
+    });
+    if(sec === 'c' && S.custom.length){
+      S.custom.forEach(function(c){
+        if(!(c.value||'').trim()) return;
+        body += '<tr><td style="padding:'+d.row+'px 12px '+d.row+'px 0;color:'+t.ac+
+          ';vertical-align:top;font-weight:600">'+esc(c.label)+
+          '</td><td style="padding:'+d.row+'px 0;vertical-align:top">'+esc(c.value)+'</td></tr>';
+      });
+    }
+    if(!body) return;
+    out.push({ rows: body.split('</tr>').length - 1, html:
+      '<div style="margin:0 0 '+d.gap+'px;break-inside:avoid">' +
+        '<div style="font-family:'+t.hd+';font-size:'+d.sec+'px;font-weight:700;color:'+t.ac+
+        ';letter-spacing:.07em;text-transform:uppercase;border-bottom:1.5px solid '+t.ru+
+        ';padding-bottom:4px;margin-bottom:7px">'+esc(L(sec))+'</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:'+d.fs+'px">'+body+'</table></div>' });
+  });
+  [['about', S.about], ['partner', S.partner]].forEach(function(x){
+    if(!(x[1]||'').trim()) return;
+    out.push({ rows: Math.ceil(x[1].length/70), html:
+      '<div style="margin:0 0 '+d.gap+'px;break-inside:avoid">' +
+        '<div style="font-family:'+t.hd+';font-size:'+d.sec+'px;font-weight:700;color:'+t.ac+
+        ';letter-spacing:.07em;text-transform:uppercase;border-bottom:1.5px solid '+t.ru+
+        ';padding-bottom:4px;margin-bottom:7px">'+esc(L(x[0]))+'</div>' +
+        '<div style="font-size:'+d.fs+'px;white-space:pre-wrap;line-height:1.5">'+esc(x[1])+'</div></div>' });
+  });
+  return out;
+}
+
+function drawSheet(){
+  $('#sheet').innerHTML = sheetMarkup();
+  checkFit();
+  scalePreview();
+}
+/* Returns the sheet as markup so the same code can render both the live
+   preview and every thumbnail in the design gallery. */
+function sheetMarkup(){
+  var t = THEMES[S.theme], rtl = !!(LANG[S.lang] && LANG[S.lang].rtl);
+  var d = DENSITY[S.density] || DENSITY.normal;
+  var hd = HEADERS[S.head][0];
+  var body = S.font === 'sans' ? "'Noto Sans', system-ui, sans-serif"
+    : S.font === 'mono' ? "'Geist Mono', 'Courier New', monospace"
+    : S.font === 'mixed' ? "'Noto Sans', system-ui, sans-serif"
+    : "Georgia, 'Times New Roman', serif";
+  if(S.font === 'sans') t = Object.assign({}, t, {hd:"'Noto Sans', system-ui, sans-serif"});
+  if(S.font === 'mono') t = Object.assign({}, t, {hd:"'Geist Mono', monospace"});
+  var blocks = sectionBlocks(t, d);
+
+  /* two columns are balanced by row count rather than blindly split in half,
+     which is what stops one column running twice as long as the other */
+  var rows;
+  if(S.layout === 'two' && blocks.length > 1){
+    var total = blocks.reduce(function(a,b){ return a + b.rows; }, 0), run = 0, left = [], right = [];
+    blocks.forEach(function(b){
+      if(run < total/2){ left.push(b.html); run += b.rows; } else right.push(b.html);
+    });
+    rows = '<div style="display:flex;gap:26px;align-items:flex-start">' +
+      '<div style="flex:1;min-width:0">' + left.join('') + '</div>' +
+      '<div style="flex:1;min-width:0">' + right.join('') + '</div></div>';
+  } else {
+    rows = blocks.map(function(b){ return b.html; }).join('');
+  }
+
+  var photo = (S.photo && S.ppos !== 'none')
+    ? '<img src="'+S.photo+'" style="width:118px;height:148px;object-fit:cover;border-radius:'+S.pshape+
+      ';border:3px solid '+t.ru+'">' : '';
+
+  var nameSize = d.name, head = '';
+  var hasName = !!(S.vals.name || '').trim();
+  var nameBlock = (hasName
+      ? '<div style="font-family:'+t.hd+';font-size:'+nameSize+'px;font-weight:700;line-height:1.2">' +
+        esc(S.vals.name) + '</div>' : '') +
+      (S.vals.occupation?'<div style="font-size:'+(d.fs+0.5)+'px;color:'+t.ac+';margin-top:3px">'+esc(S.vals.occupation)+'</div>':'');
+
+  if(S.hstyle === 'band'){
+    head = '<div style="background:'+t.ac+';color:'+t.bg+';padding:14px 20px;border-radius:6px;margin-bottom:16px;' +
+      'display:flex;gap:18px;align-items:center;'+(S.ppos==='center'?'flex-direction:column;text-align:center;':'')+'">' +
+      '<div style="flex:1">'+nameBlock.replace(new RegExp('color:'+t.ac,'g'),'color:'+t.bg+';opacity:.85')+'</div>' +
+      photo + '</div>';
+  } else if(S.hstyle === 'rule'){
+    head = '<div style="border:2px solid '+t.ru+';border-radius:6px;padding:14px 18px;margin-bottom:16px;' +
+      'display:flex;gap:18px;align-items:center;'+(S.ppos==='center'?'flex-direction:column;text-align:center;':'')+'">' +
+      '<div style="flex:1">'+nameBlock+'</div>'+photo+'</div>';
+  } else if(S.hstyle === 'center'){
+    head = '<div style="text-align:center;margin-bottom:18px">' +
+      (photo ? '<div style="margin-bottom:10px">'+photo+'</div>' : '') + nameBlock + '</div>';
+  } else if(S.hstyle === 'minimal'){
+    head = '<div style="display:flex;gap:16px;align-items:center;margin-bottom:14px">' +
+      '<div style="flex:1;font-family:'+t.hd+';font-size:'+(d.name*0.6)+'px;font-weight:700;letter-spacing:.04em;text-transform:uppercase">' +
+      esc(S.vals.name || '') + '</div>' + photo + '</div>' +
+      '<div style="height:1px;background:'+t.ru+';margin:0 0 14px"></div>';
+  } else {
+    head = '<div style="display:flex;gap:20px;align-items:flex-start;' +
+      (S.ppos==='center'?'flex-direction:column;align-items:center;text-align:center;':'')+'margin-bottom:16px">' +
+      '<div style="flex:1">'+nameBlock+'</div>'+photo+'</div>' +
+      '<div style="height:2px;background:'+t.ru+';margin:0 0 16px"></div>';
+  }
+
+  var bw = S.border === 'none' ? '0' : '8px ' + S.border + ' ' + t.ru;
+  return '<div id="sheetInner" dir="'+(rtl?'rtl':'ltr')+'" style="position:relative;overflow:hidden;width:'+A4W+
+      'px;min-height:'+A4H+'px;background:'+t.bg+';color:'+t.ink+';padding:'+d.pad+
+      'px;box-sizing:border-box;font-family:'+body+';border:'+bw+'">' +
+      bgLayer(t) +
+      '<div style="position:relative;z-index:1">' +
+        (S.symbol && S.symbol !== 'none'
+          ? '<div style="text-align:center;margin-bottom:'+(hd?4:10)+'px">' + symbolSvg(S.symbol, t.ac, d.name + 12) + '</div>' : '') +
+        (hd?'<div style="text-align:center;font-family:'+t.hd+';font-size:'+(d.fs+3)+'px;color:'+t.ac+';margin-bottom:8px">'+esc(hd)+'</div>':'') +
+        head +
+        (rows||'<p style="color:#aaa">Fill in the details and they will appear here.</p>') +
+      '</div>' +
+    '</div>';
+}
+
+/* How many A4 pages does the content actually need? Without this the sheet
+   just grows and the extra silently falls off the bottom of the PDF. */
+function pageCount(){
+  var el = $('#sheetInner');
+  return el ? Math.max(1, Math.ceil((el.scrollHeight - 4) / A4H)) : 1;
+}
+/* Labels follow the chosen language, but the details are whatever was
+   typed. Switching to Marathi and leaving "Aarav Sharma" in Latin letters
+   is a perfectly reasonable choice — plenty of families do exactly that —
+   so this offers the conversion rather than doing it behind your back. */
+function checkMixed(){
+  var w = $('#mixwarn'); if(!w) return;
+  if(!SCRIPT_BASE[S.lang]){ w.hidden = true; return; }
+  var latin = 0, total = 0;
+  Object.keys(S.vals).forEach(function(k){
+    var v = (S.vals[k] || '').trim();
+    if(!v || FIELD_TYPE[k]) return;
+    total++;
+    if(/[A-Za-z]{2,}/.test(v)) latin++;
+  });
+  if(total < 2 || latin < Math.max(2, total * 0.4)){ w.hidden = true; return; }
+  w.hidden = false;
+  w.innerHTML = '<b>Your labels are in ' + esc(LANG[S.lang].n) + ', but your details are still in English.</b>' +
+    'That is a normal choice — many families keep names in English. If you would rather have everything in ' +
+    esc(LANG[S.lang].n) + ', convert them here.' +
+    '<button class="btn ghost sm" id="mixGo">Convert details to ' + esc(LANG[S.lang].n) + '</button>' +
+    (trBackup ? ' <button class="btn ghost sm" id="mixUndo">Undo</button>' : '');
+}
+function checkFit(){
+  var n = pageCount(), w = $('#fitwarn');
+  $('#pagecount').textContent = n > 1 ? '· ' + n + ' pages' : '· 1 page';
+  if(n <= 1){ w.hidden = true; return; }
+  w.hidden = false;
+  w.innerHTML = '<b>This runs to ' + n + ' pages.</b>' +
+    'A biodata is usually kept to one. Try compact spacing or two columns — or leave it, and the PDF will simply have ' + n + ' pages.' +
+    '<button class="btn ghost sm" id="autofit">Fit onto one page</button>';
+}
+function autoFit(){
+  var tries = [['normal','two'],['compact','single'],['compact','two']];
+  for(var i=0;i<tries.length;i++){
+    S.density = tries[i][0]; S.layout = tries[i][1];
+    $('#density').value = S.density; $('#layout').value = S.layout;
+    drawSheet();
+    if(pageCount() === 1){ save(); return true; }
+  }
+  save(); return false;
+}
+function scalePreview(){
+  var wrap = $('#pvin').parentNode;
+  var k = S.zoom === 'fit' ? Math.min(1, (wrap.clientWidth - 24) / A4W) : (+S.zoom/100);
+  var el = $('#sheetInner');
+  var h = el ? el.scrollHeight : A4H;
+  $('#pvin').style.transform = 'scale(' + k + ')';
+  $('#pvin').style.height = (h * k + 8) + 'px';
+}
+
+function draw(){ drawSheet(); progress(); checkMixed(); save(); }
+function redrawAll(){ drawSteps(); drawForm(); drawTrBar(); draw(); }
+
+/* ── chrome ────────────────────────────────────────────────────────── */
+$('#langbar').innerHTML = Object.keys(LANG).map(function(k){
+  return '<button class="lchip" data-l="'+k+'" aria-pressed="'+(S.lang===k)+'">'+LANG[k].n+'</button>';
+}).join('');
+$('#themes').innerHTML = Object.keys(THEMES).map(function(k){
+  var t = THEMES[k];
+  return '<button class="th" data-t="'+k+'" aria-pressed="'+(S.theme===k)+'">' +
+    '<span class="sw" style="background:'+t.bg+';color:'+t.ac+';border-bottom:1px solid '+t.ru+'">Aa</span>' +
+    '<span class="nm">'+t.n+'</span></button>';
+}).join('');
+$('#head').innerHTML = HEADERS.map(function(h,i){ return '<option value="'+i+'">'+esc(h[1])+'</option>'; }).join('');
+/* Draw each design by temporarily standing the real state in for a preview
+   one. Same renderer, same output — so a thumbnail can never drift from
+   what actually downloads. */
+var GAL_SAMPLE = null;
+function drawGallery(){
+  var g = $('#gal'); if(!g) return;
+  if(!GAL_SAMPLE){
+    GAL_SAMPLE = { name:'Your name', dob:'1996-08-14', pob:'Pune', height:"5' 10\"",
+      rashi:'Simha', nakshatra:'Magha', religion:'Hindu', gotra:'Kashyap',
+      education:'B.E. Computer Science', occupation:'Software Engineer',
+      father:'Shri Rajesh Sharma', mother:'Smt. Sunita Sharma',
+      siblings:'One younger sister', native:'Nashik',
+      person:'Father', phone:'+91 98765 43210' };
+  }
+  var real = S;
+  var cards = TEMPLATES.map(function(tp){
+    S = Object.assign({}, real, {
+      theme:tp.theme, motif:tp.motif, hstyle:tp.hstyle, border:tp.border, symbol:tp.symbol,
+      bgimg:'', photo:real.photo, vals:GAL_SAMPLE, custom:[], about:'', partner:'',
+      layout:'single', density:'compact', font:real.font, head:0, mopacity:12
+    });
+    var html = sheetMarkup().replace('id="sheetInner"', '');
+    return '<button class="tpl" data-tpl="'+esc(tp.n)+'" aria-pressed="'+(real.tplName===tp.n)+'">' +
+      '<span class="shot">' + html + '</span>' +
+      '<span class="nm">' + esc(tp.n) + '</span></button>';
+  }).join('');
+  /* The marquee needs a second copy so translateX(-50%) wraps seamlessly.
+     On touch the track is swiped instead, so one copy is enough — which
+     halves the number of A4 sheets a phone has to lay out. */
+  var dup = (window.__PLATFORM__ && window.__PLATFORM__.touch) ? '' : cards;
+  g.innerHTML = '<div class="gal-track">' + cards + dup + '</div>';
+  S = real;
+}
+function applyTemplate(name){
+  var tp = TEMPLATES.filter(function(x){ return x.n === name; })[0];
+  if(!tp) return;
+  S.theme = tp.theme; S.motif = tp.motif; S.hstyle = tp.hstyle;
+  S.border = tp.border; S.symbol = tp.symbol; S.bgimg = ''; S.tplName = tp.n;
+  ['theme','motif','hstyle','border','symbol'].forEach(function(){});
+  $('#border').value = S.border;
+  $('#hstyle').value = S.hstyle;
+  $$('[data-t]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.t === S.theme); });
+  $$('[data-m]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.m === S.motif); });
+  $$('[data-sym]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.sym === S.symbol); });
+  $$('[data-tpl]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.tpl === S.tplName); });
+  drawMotifs(); drawSymbols(); draw();
+}
+function drawSymbols(){
+  var t = THEMES[S.theme];
+  $('#syms').innerHTML = Object.keys(SYMBOLS).map(function(k){
+    var art = SYMBOLS[k].d ? symbolSvg(k, t.ac, 34)
+      : '<svg viewBox="0 0 100 100" width="34" height="34"><path d="M22 78 L78 22" stroke="' + t.ru + '" stroke-width="6"/></svg>';
+    return '<button type="button" data-sym="'+k+'" aria-pressed="'+(S.symbol===k)+'" title="'+esc(SYMBOLS[k].n)+'">' +
+      art + '<span class="nm">'+esc(SYMBOLS[k].n)+'</span></button>';
+  }).join('');
+}
+function drawMotifs(){
+  var t = THEMES[S.theme];
+  $('#motifs').innerHTML = Object.keys(MOTIFS).map(function(k){
+    var cfg = MOTIFS[k].build(t.ac, HEADERS[S.head][0] || 'ॐ');
+    var bg = cfg ? 'background-image:url(' + cfg.uri + ')' : '';
+    return '<button class="th" data-m="' + k + '" aria-pressed="' + (S.motif===k) + '">' +
+      '<span class="sw" style="' + bg + '"></span>' +
+      '<span class="nm">' + esc(MOTIFS[k].n) + '</span></button>';
+  }).join('');
+}
+drawMotifs();
+drawSymbols();
+drawGallery();
+$('#adTop').innerHTML = adSlot('after-gallery');
+$('#adFoot').innerHTML = adSlot('guide-foot');
+pushAds();
+$('#langlinks').innerHTML = Object.keys(LANG).filter(function(k){ return k!=='en'; })
+  .map(function(k){ return '<a href="./'+k+'/">'+LANG[k].n+'</a>'; }).join(' · ');
+
+document.addEventListener('click', function(e){
+  if(e.target && (e.target.id === 'trGo' || e.target.id === 'mixGo')){ runTranslit(); redrawAll(); return; }
+  if(e.target && (e.target.id === 'trUndo' || e.target.id === 'mixUndo')){ undoTranslit(); redrawAll(); return; }
+  var l = e.target.closest('[data-l]');
+  if(l){ S.lang = l.dataset.l; S.labels = {};
+    $$('.lchip').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.l === S.lang); });
+    redrawAll(); return; }
+  var t = e.target.closest('[data-t]');
+  if(t){ S.theme = t.dataset.t;
+    $$('[data-t]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.t === S.theme); });
+    S.border = THEMES[S.theme].bd; $('#border').value = S.border;
+    drawMotifs(); drawSymbols(); draw(); return; }
+  var tp = e.target.closest('[data-tpl]');
+  if(tp){
+    applyTemplate(tp.dataset.tpl);
+    var st = $('#steps');
+    if(st && st.scrollIntoView){
+      try{ st.scrollIntoView({behavior:'smooth', block:'start'}); }
+      catch(err){ st.scrollIntoView(true); }
+    }
+    return;
+  }
+  var sy = e.target.closest('[data-sym]');
+  if(sy){ S.symbol = sy.dataset.sym;
+    $$('[data-sym]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.sym === S.symbol); });
+    draw(); return; }
+  var m = e.target.closest('[data-m]');
+  if(m){ S.motif = m.dataset.m; S.bgimg = '';
+    $$('[data-m]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.m === S.motif); });
+    draw(); return; }
+  var s = e.target.closest('[data-s]');
+  if(s){ S.step = s.dataset.s; drawSteps(); drawForm(); return; }
+});
+$('#form').addEventListener('click', function(e){
+  var mv = e.target.closest('[data-mv]');
+  if(mv){ moveField(S.step, mv.dataset.f, mv.dataset.mv === 'up' ? -1 : 1); drawForm(); draw(); return; }
+  var rm = e.target.closest('[data-rm]');
+  if(rm){ S.removed[rm.dataset.rm] = true; drawForm(); draw(); return; }
+  var bk = e.target.closest('[data-back]');
+  if(bk){ delete S.removed[bk.dataset.back]; drawForm(); draw(); return; }
+});
+$('#form').addEventListener('input', function(e){
+  var el = e.target;
+  if(el.dataset.k === '__about'){ S.about = el.value; }
+  else if(el.dataset.k === '__partner'){ S.partner = el.value; }
+  else if(el.dataset.k){ S.vals[el.dataset.k] = el.value; }
+  else if(el.dataset.ck !== undefined && el.dataset.ck !== ''){ S.custom[+el.dataset.ck].value = el.value; }
+  else if(el.dataset.lab){ S.labels[el.dataset.lab] = el.textContent.trim(); }
+  else if(el.dataset.cl){ S.custom[+el.dataset.cl].label = el.textContent.trim(); }
+  draw();
+});
+$('#mopacity').addEventListener('input', function(){
+  S.mopacity = +this.value; $('#mov').textContent = this.value; draw();
+});
+$('#mplace').addEventListener('change', function(){ S.mplace = this.value; draw(); });
+$('#border').addEventListener('change', function(){ S.border = this.value; draw(); });
+$('#bgimg').addEventListener('change', function(){
+  var f = this.files && this.files[0]; if(!f) return;
+  var r = new FileReader();
+  r.onload = function(){
+    var im = new Image();
+    im.onload = function(){
+      /* downscale so the saved draft and the PDF stay a sensible size */
+      var c = document.createElement('canvas');
+      var w = 900, h = Math.round(900 * im.naturalHeight / im.naturalWidth);
+      c.width = w; c.height = h;
+      c.getContext('2d').drawImage(im, 0, 0, w, h);
+      S.bgimg = c.toDataURL('image/jpeg', .82);
+      S.motif = 'none';
+      $$('[data-m]').forEach(function(x){ x.setAttribute('aria-pressed', x.dataset.m === 'none'); });
+      draw();
+    };
+    im.src = r.result;
+  };
+  r.readAsDataURL(f);
+});
+$('#bgclear').addEventListener('click', function(){ S.bgimg = ''; $('#bgimg').value = ''; draw(); });
+
+['#layout','#density','#font','#hstyle'].forEach(function(sel){
+  $(sel).addEventListener('change', function(){ S[sel.slice(1)] = this.value; draw(); });
+});
+document.addEventListener('click', function(e){
+  if(e.target && e.target.id === 'autofit'){
+    var ok = autoFit();
+    $('#msg').className = 'hint';
+    $('#msg').textContent = ok ? 'Adjusted to fit on one page.'
+      : 'Still over one page — shorten a long answer, or leave it as two pages.';
+  }
+});
+
+['#head','#pshape','#ppos','#fmt'].forEach(function(sel){
+  $(sel).addEventListener('change', function(){
+    var k = sel.slice(1);
+    S[k] = (k === 'head') ? +this.value : this.value;
+    if(k === 'fmt'){ if(!showSec(S.step)) S.step = 'p'; redrawAll(); }
+    else { if(k === 'head') drawMotifs(); draw(); }
+  });
+});
+/* ── photo cropping ─────────────────────────────────────────────────────
+   Without this, object-fit:cover crops wherever the image happens to land,
+   which on a portrait from a phone gallery usually means through the chin.
+   ──────────────────────────────────────────────────────────────────── */
+var CW = 240, CH = 320, cropImg = null, cropDrag = null;
+function cropBase(){
+  return cropImg ? Math.max(CW / cropImg.naturalWidth, CH / cropImg.naturalHeight) : 1;
+}
+function clampCrop(){
+  if(!cropImg) return;
+  var sc = cropBase() * (S.crop.z / 100);
+  S.crop.x = Math.min(0, Math.max(CW - cropImg.naturalWidth * sc, S.crop.x));
+  S.crop.y = Math.min(0, Math.max(CH - cropImg.naturalHeight * sc, S.crop.y));
+}
+function paintCrop(){
+  var c = $('#crop'); if(!c || !cropImg) return;
+  var x = c.getContext('2d'), sc = cropBase() * (S.crop.z / 100);
+  x.clearRect(0, 0, CW, CH);
+  x.drawImage(cropImg, S.crop.x, S.crop.y, cropImg.naturalWidth * sc, cropImg.naturalHeight * sc);
+}
+/* same framing, rendered at print resolution */
+function bakePhoto(){
+  if(!cropImg) return;
+  var K = 3, c = document.createElement('canvas');
+  c.width = CW * K; c.height = CH * K;
+  var x = c.getContext('2d');
+  x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+  var sc = cropBase() * (S.crop.z / 100) * K;
+  x.drawImage(cropImg, S.crop.x * K, S.crop.y * K,
+    cropImg.naturalWidth * sc, cropImg.naturalHeight * sc);
+  S.photo = c.toDataURL('image/jpeg', .88);
+}
+function cropPos(e){
+  var r = $('#crop').getBoundingClientRect(), t = e.touches ? e.touches[0] : e;
+  return { x:(t.clientX - r.left) * (CW / (r.width || CW)),
+           y:(t.clientY - r.top) * (CH / (r.height || CH)) };
+}
+['mousedown','touchstart'].forEach(function(ev){
+  $('#crop').addEventListener(ev, function(e){
+    if(!cropImg) return;
+    e.preventDefault();
+    var p = cropPos(e);
+    cropDrag = { px:p.x, py:p.y, ox:S.crop.x, oy:S.crop.y };
+    this.style.cursor = 'grabbing';
+  });
+});
+['mousemove','touchmove'].forEach(function(ev){
+  $('#crop').addEventListener(ev, function(e){
+    if(!cropDrag) return;
+    e.preventDefault();
+    var p = cropPos(e);
+    S.crop.x = cropDrag.ox + (p.x - cropDrag.px);
+    S.crop.y = cropDrag.oy + (p.y - cropDrag.py);
+    clampCrop(); paintCrop();
+  });
+});
+['mouseup','mouseleave','touchend'].forEach(function(ev){
+  $('#crop').addEventListener(ev, function(){
+    if(!cropDrag) return;
+    cropDrag = null; this.style.cursor = 'grab';
+    bakePhoto(); draw();
+  });
+});
+$('#zoomR').addEventListener('input', function(){ S.crop.z = +this.value; clampCrop(); paintCrop(); });
+$('#zoomR').addEventListener('change', function(){ bakePhoto(); draw(); });
+$('#cropOff').addEventListener('click', function(){
+  S.photo = ''; S.photoRaw = ''; cropImg = null;
+  $('#cropWrap').hidden = true; $('#photo').value = ''; draw();
+});
+function loadCropImage(src, keepFraming){
+  cropImg = new Image();
+  cropImg.onload = function(){
+    if(!keepFraming){
+      S.crop = { x:0, y:0, z:100 };
+      var b = cropBase();
+      S.crop.x = (CW - cropImg.naturalWidth * b) / 2;
+      S.crop.y = (CH - cropImg.naturalHeight * b) / 2;
+    }
+    $('#zoomR').value = S.crop.z;
+    $('#cropWrap').hidden = false;
+    clampCrop(); paintCrop();
+    if(!keepFraming) bakePhoto();
+    draw();
+  };
+  cropImg.src = src;
+}
+$('#photo').addEventListener('change', function(){
+  var f = this.files && this.files[0]; if(!f) return;
+  var r = new FileReader();
+  r.onload = function(){
+    var im = new Image();
+    im.onload = function(){
+      /* keep a downscaled original so the crop can be redone at any time */
+      var c = document.createElement('canvas');
+      var sc = Math.min(1, 900 / im.naturalWidth);
+      c.width = Math.round(im.naturalWidth * sc);
+      c.height = Math.round(im.naturalHeight * sc);
+      c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+      S.photoRaw = c.toDataURL('image/jpeg', .88);
+      loadCropImage(S.photoRaw, false);
+    };
+    im.src = r.result;
+  };
+  r.readAsDataURL(f);
+});
+$('#addf').addEventListener('click', function(){
+  S.custom.push({label:'New field', value:''}); S.step = 'x'; redrawAll();
+});
+$('#clear').addEventListener('click', function(){
+  if(!confirm('Clear everything and start again? Your current draft is kept, and "Restore draft" will bring it back.')) return;
+  stash();
+  S.vals = {}; S.custom = []; S.labels = {}; S.photo = ''; S.about = ''; S.partner = ''; S.bgimg = '';
+  redrawAll();
+});
+function sampleData(){
+  S.vals = { name:'Aarav Sharma', dob:'1996-08-14', tob:'06:42', pob:'Pune, Maharashtra',
+    height:"5' 10\"", weight:'72 kg', blood:'B+', complexion:'Fair', marital:'Never married',
+    diet:'Vegetarian', tongue:'Marathi', hobbies:'Trekking, photography, classical music',
+    religion:'Hindu', caste:'Brahmin', subcaste:'Deshastha', gotra:'Kashyap', rashi:'Simha',
+    nakshatra:'Magha', manglik:'No', education:'B.E. Computer Science, COEP Pune',
+    occupation:'Software Engineer', company:'Infosys Ltd.', income:'₹18 lakh per annum', workplace:'Pune',
+    father:'Shri Rajesh Sharma', fatherocc:'Retired Bank Manager', mother:'Smt. Sunita Sharma',
+    motherocc:'Homemaker', siblings:'One younger sister (studying)', native:'Nashik', ftype:'Nuclear family',
+    person:'Shri Rajesh Sharma (Father)', phone:'+91 98765 43210',
+    email:'sharma.family@example.com', address:'Kothrud, Pune 411038' };
+  S.about = 'Easy-going, family-oriented and happiest outdoors. I cook on weekends and play the tabla badly but enthusiastically.';
+  S.partner = 'Someone kind and straightforward, settled in or near Pune, who enjoys travelling as much as staying in.';
+}
+$('#sample').addEventListener('click', function(){ sampleData(); redrawAll(); });
+
+var EXAMPLE = null, exampleOn = false;
+$('#egBtn').addEventListener('click', function(){
+  if(!exampleOn){
+    EXAMPLE = JSON.parse(JSON.stringify({vals:S.vals, about:S.about, partner:S.partner, custom:S.custom}));
+    sampleData(); exampleOn = true;
+    this.textContent = 'Back to my biodata';
+    $('#msg').className = 'hint';
+    $('#msg').textContent = 'This is a worked example. Your own details are kept safely — press again to return to them.';
+  } else {
+    S.vals = EXAMPLE.vals; S.about = EXAMPLE.about; S.partner = EXAMPLE.partner; S.custom = EXAMPLE.custom;
+    exampleOn = false;
+    this.textContent = 'Show a worked example';
+    $('#msg').textContent = 'Tip: the image is easiest to send on WhatsApp; the PDF is better for printing.';
+  }
+  redrawAll();
+});
+$('#restore').addEventListener('click', function(){
+  if(load()){ $$('.lchip').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.l === S.lang); });
+    $$('.th').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.t === S.theme); });
+    $('#head').value = S.head; $('#pshape').value = S.pshape; $('#ppos').value = S.ppos; $('#fmt').value = S.fmt;
+    $('#mopacity').value = S.mopacity; $('#mov').textContent = S.mopacity;
+    ['layout','density','font','hstyle'].forEach(function(k){
+      if(S[k] && $('#'+k)) $('#'+k).value = S[k];
+    });
+    if(S.mplace) $('#mplace').value = S.mplace;
+    $('#border').value = S.border || THEMES[S.theme].bd;
+    $$('[data-m]').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.m === S.motif); });
+    drawMotifs(); drawSymbols();
+    if(S.photoRaw){ if(!S.crop) S.crop = {x:0,y:0,z:100}; loadCropImage(S.photoRaw, true); }
+    redrawAll();
+    $('#msg').textContent = 'Draft restored.';
+  } else { $('#msg').textContent = 'No saved draft found on this device.'; }
+});
+$('#jump').addEventListener('click', function(){
+  $('#steps').scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+/* ── export ────────────────────────────────────────────────────────── */
+/* Two things make html2canvas draw words on top of each other, and this
+   file managed both:
+
+   1. The live preview sits inside transform:scale(...) so it fits the
+      column. html2canvas measures text through that transform and gets the
+      widths wrong. The clone has the transform stripped before capture.
+
+   2. It measures with whatever font is loaded at that instant. If Fraunces
+      or Noto Sans has not finished downloading, every word is positioned
+      using fallback metrics and then painted with the real font — which is
+      precisely the overlap you see.  */
+function render(scale){
+  return need(CDN_H2C)
+    .then(function(){
+      /* wait for the webfonts, and for the Devanagari/Tamil faces
+         specifically, or Indic text is measured against a fallback */
+      if(!document.fonts) return null;
+      var want = ['700 26px Fraunces', '400 13px "Noto Sans"', '600 13px "Noto Sans"'];
+      return Promise.all(want.map(function(f){
+        try{ return document.fonts.load(f, 'आमराठीAa1'); }catch(e){ return null; }
+      })).then(function(){ return document.fonts.ready; });
+    })
+    .then(function(){
+      var el = $('#sheetInner');
+      var h = Math.max(A4H, el.scrollHeight);
+      return window.html2canvas(el, {
+        scale: scale,
+        backgroundColor: null,
+        useCORS: true,
+        logging: false,
+        width: A4W,
+        height: h,
+        windowWidth: A4W,
+        windowHeight: h,
+        onclone: function(doc){
+          /* render at natural size: no scaling, no clipping, no scroll */
+          var pv = doc.getElementById('pvin');
+          if(pv){ pv.style.transform = 'none'; pv.style.height = 'auto'; }
+          var box = doc.querySelector('.pv');
+          if(box){ box.style.overflow = 'visible'; box.style.padding = '0'; box.style.background = 'none'; }
+          var sheet = doc.getElementById('sheetInner');
+          if(sheet){ sheet.style.transform = 'none'; sheet.style.margin = '0'; }
+        }
+      });
+    });
+}
+function fname(ext){ return (S.vals.name||'biodata').trim().replace(/\s+/g,'-').toLowerCase() + '.' + ext; }
+
+/* ── share sheet ────────────────────────────────────────────────────────
+   A biodata exists to be forwarded, almost always on WhatsApp. Downloading
+   then hunting for the file then attaching it is three steps on a phone;
+   the native share sheet is one. Only shown where the browser can actually
+   share a file, so desktop users never see a button that would fail.
+   ──────────────────────────────────────────────────────────────────── */
+function canShareFiles(){
+  try{
+    return !!(navigator.canShare && navigator.share &&
+      navigator.canShare({ files:[new File(['x'], 'a.png', {type:'image/png'})] }));
+  }catch(e){ return false; }
+}
+var P = window.__PLATFORM__ || {ios:false, android:false, touch:false};
+
+if(canShareFiles()){
+  var sb = $('#share');
+  sb.hidden = false;
+  /* Android's share sheet is dominated by WhatsApp; iOS shows AirDrop,
+     Messages and Mail alongside it, so a generic label reads honestly. */
+  sb.textContent = P.android ? 'Send on WhatsApp' : 'Share biodata';
+  if(P.ios || P.android){
+    /* On a phone, sharing is the thing people actually want — make it the
+       primary action and step the downloads back. */
+    $('#png').className = 'btn';
+    $('#pdf').className = 'btn ghost';
+  }
+}
+/* Safari on iOS ignores the download attribute and opens the file in a new
+   tab instead. Better to say so than let people think it failed. */
+var IOS_SAVE_NOTE = 'iPhone opens the file in a new tab rather than saving it — tap the share icon there, then "Save to Files" or "Save Image".';
+if(P.ios && !P.android) $('#print').hidden = true;   /* iOS print dialog from a popup is unreliable */
+
+$('#share').addEventListener('click', function(){
+  var b = this, m = $('#msg');
+  b.disabled = true; m.className = 'hint'; m.textContent = 'Preparing to share…';
+  render(2).then(function(c){
+    return new Promise(function(res){ c.toBlob(res, 'image/png'); });
+  }).then(function(blob){
+    if(!blob) throw new Error('no image');
+    var file = new File([blob], fname('png'), { type:'image/png' });
+    if(!navigator.canShare || !navigator.canShare({ files:[file] })) throw new Error('unsupported');
+    return navigator.share({ files:[file], title:(S.vals.name || 'Marriage biodata') });
+  }).then(function(){
+    m.textContent = 'Shared.';
+  }).catch(function(err){
+    /* the user closing the share sheet is not a failure — say nothing */
+    if(err && (err.name === 'AbortError' || err.name === 'NotAllowedError')){ m.textContent = ''; return; }
+    m.className = 'err';
+    m.textContent = 'Sharing did not work on this device — use Download image instead.';
+  }).then(function(){ b.disabled = false; });
+});
+
+$('#png').addEventListener('click', function(){
+  var b = this, m = $('#msg'); b.disabled = true; m.className='hint'; m.textContent = 'Preparing your image…';
+  render(2).then(function(c){
+    download(c.toDataURL('image/png'), fname('png'));
+    m.textContent = P.ios ? IOS_SAVE_NOTE : 'Image saved. Ready to send on WhatsApp.';
+  }).catch(function(){ m.className='err'; m.textContent = 'Could not create the image. Check your connection and try again.'; })
+   .then(function(){ b.disabled = false; });
+});
+$('#pdf').addEventListener('click', function(){
+  var b = this, m = $('#msg'); b.disabled = true; m.className='hint'; m.textContent = 'Preparing your PDF…';
+  Promise.all([render(2), need(CDN_JSPDF)]).then(function(r){
+    var c = r[0], doc = new window.jspdf.jsPDF({unit:'pt', format:'a4', compress:true});
+    var W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight();
+    /* Slice the tall canvas into A4-shaped pieces. A single addImage would
+       squash a two-page biodata onto one page, or crop the bottom off. */
+    var sliceH = Math.round(c.width * (H / W));
+    var pages = Math.max(1, Math.ceil(c.height / sliceH));
+    for(var i = 0; i < pages; i++){
+      var hPx = Math.min(sliceH, c.height - i*sliceH);
+      var cut = document.createElement('canvas');
+      cut.width = c.width; cut.height = hPx;
+      cut.getContext('2d').drawImage(c, 0, i*sliceH, c.width, hPx, 0, 0, c.width, hPx);
+      if(i) doc.addPage();
+      doc.addImage(cut.toDataURL('image/jpeg', .93), 'JPEG', 0, 0, W, hPx * (W/c.width), undefined, 'FAST');
+    }
+    doc.save(fname('pdf'));
+    m.textContent = P.ios ? IOS_SAVE_NOTE
+      : pages > 1 ? 'PDF saved — ' + pages + ' A4 pages.'
+      : 'PDF saved at A4 size, ready to print.';
+  }).catch(function(){ m.className='err'; m.textContent = 'Could not create the PDF. Check your connection and try again.'; })
+   .then(function(){ b.disabled = false; });
+});
+$('#print').addEventListener('click', function(){
+  var w = window.open('', '_blank');
+  if(!w){ $('#msg').className='err'; $('#msg').textContent = 'Your browser blocked the print window — allow pop-ups and try again.'; return; }
+  w.document.write('<!DOCTYPE html><title>'+esc(S.vals.name||'Biodata')+'</title>' +
+    '<style>body{margin:0}@page{size:A4;margin:0}</style>' + $('#sheet').innerHTML);
+  w.document.close();
+  setTimeout(function(){ w.focus(); w.print(); }, 400);
+});
+
+/* ══════════════════════════════════════════════════════════════════════
+   IMPORT AN EXISTING BIODATA
+   Most people are not starting from nothing — they have one a relative made
+   in Word years ago, as a photo or a PDF. Reading it and filling the form
+   turns twenty minutes of retyping into one drop.
+
+   Recognition runs on the device with Tesseract, so the promise that
+   nothing leaves the phone survives. It is a first draft, never a final
+   answer: every line lands in a review table with a tick box.
+   ══════════════════════════════════════════════════════════════════════ */
+var CDN_TESS  = 'https://cdn.jsdelivr.net/npm/tesseract.js@7.0.0/dist/tesseract.min.js';
+var CDN_PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+
+/* every label we know, in every language, pointing back at its field */
+var LABEL_INDEX = (function(){
+  var ix = {};
+  function norm(x){ return String(x).toLowerCase().replace(/[^a-z\u0900-\u0D7F]+/g, ''); }
+  Object.keys(LANG).forEach(function(code){
+    var set = LANG[code];
+    Object.keys(set).forEach(function(k){
+      if(k === 'n' || k === 'rtl' || SECTIONS.indexOf(k) >= 0) return;
+      var key = norm(set[k]); if(key) ix[key] = k;
+    });
+  });
+  /* what people actually write on a biodata, which is not always our label */
+  var alias = {
+    dob:['dateofbirth','birthdate','dob','dateofbirthdob','janmatarikh','birthday'],
+    tob:['timeofbirth','birthtime','tob'],
+    pob:['placeofbirth','birthplace','pob'],
+    name:['fullname','candidatename','nameofboy','nameofgirl','myname'],
+    height:['heightft','heightcm'],
+    education:['qualification','educationalqualification','highesteducation','studies','degree'],
+    occupation:['job','profession','work','designation','employedas'],
+    company:['companyname','employer','organisation','organization','workingat','firm'],
+    income:['salary','annualincome','monthlyincome','package','ctc'],
+    workplace:['joblocation','worklocation','placeofwork','postedat'],
+    father:['fathersname','fathername','fatherfullname'],
+    fatherocc:['fathersoccupation','fatheroccupation','fathersprofession','fatherjob'],
+    mother:['mothersname','mothername','motherfullname'],
+    motherocc:['mothersoccupation','motheroccupation','mothersprofession','motherjob'],
+    siblings:['brother','sister','brothers','sisters','brothersister','siblingdetails','noofsiblings'],
+    native:['nativeplace','hometown','village','pind','mulgaon'],
+    ftype:['familytype','familystatus','familyvalues'],
+    person:['contactperson','referenceperson','contactname'],
+    phone:['mobile','mobileno','mobilenumber','contactno','contactnumber','phoneno','whatsapp','cell'],
+    email:['emailid','emailaddress','mail'],
+    address:['residentialaddress','postaladdress','currentaddress','permanentaddress'],
+    rashi:['rasi','raashi','moonsign','zodiac','zodiacsign'],
+    nakshatra:['star','nakshatram','natchathiram','birthstar'],
+    gotra:['gotram','gothra','gothram','kul','kuldaivat'],
+    manglik:['mangal','mangaldosh','manglikstatus','kujadosham','chevvaidosham'],
+    caste:['castesubcaste','community','jati'],
+    subcaste:['subcaste','subcast','poticaste'],
+    tongue:['mothertongue','languagesknown','languages'],
+    complexion:['colour','color','skintone'],
+    marital:['maritalstatus','status'],
+    diet:['foodhabits','eatinghabits','dietaryhabits','veg'],
+    hobbies:['interests','hobbiesinterests','likes'],
+    blood:['bloodgroup','bloodtype']
+  };
+  Object.keys(alias).forEach(function(k){
+    alias[k].forEach(function(a){ ix[norm(a)] = k; });
+  });
+  return ix;
+})();
+
+function lev(a, b){
+  if(Math.abs(a.length - b.length) > 3) return 99;
+  var m = [], i, j;
+  for(i = 0; i <= b.length; i++) m[i] = [i];
+  for(j = 0; j <= a.length; j++) m[0][j] = j;
+  for(i = 1; i <= b.length; i++)
+    for(j = 1; j <= a.length; j++)
+      m[i][j] = b.charAt(i-1) === a.charAt(j-1) ? m[i-1][j-1]
+        : Math.min(m[i-1][j-1] + 1, m[i][j-1] + 1, m[i-1][j] + 1);
+  return m[b.length][a.length];
+}
+function matchLabel(raw){
+  var k = String(raw).toLowerCase().replace(/[^a-z\u0900-\u0D7F]+/g, '');
+  if(!k || k.length < 2) return null;
+  if(LABEL_INDEX[k]) return LABEL_INDEX[k];
+  var keys = Object.keys(LABEL_INDEX), best = null, bd = 3;
+  for(var i = 0; i < keys.length; i++){
+    var d = lev(k, keys[i]);          /* OCR turns Gotra into Gofra */
+    if(d < bd){ bd = d; best = LABEL_INDEX[keys[i]]; }
+  }
+  return best;
+}
+/* pull "Label : Value" pairs out of raw recognised text */
+function parseBiodata(text){
+  var out = {}, lines = text.split(/\r?\n/);
+  lines.forEach(function(line){
+    line = line.replace(/\s+/g, ' ').trim();
+    if(line.length < 3) return;
+    var lab = null, val = null;
+    var c = line.indexOf(':');
+    if(c > 0 && c < line.length - 1){
+      lab = line.slice(0, c); val = line.slice(c + 1);
+    } else {
+      var m = /^(.{2,28}?)\s{2,}(.+)$/.exec(line);
+      if(m){ lab = m[1]; val = m[2]; }
+    }
+    if(!lab || !val) return;
+    val = val.replace(/^[-–—:.\s]+/, '').trim();
+    if(!val || val.length > 120) return;
+    var key = matchLabel(lab);
+    if(key && !out[key]) out[key] = val;
+  });
+  return out;
+}
+
+var impFound = null;
+function impSay(msg, bad){
+  var m = $('#impMsg');
+  m.className = bad ? 'err' : 'hint';
+  m.textContent = msg;
+}
+/* an image straight through; a PDF rendered to canvas first */
+function impToCanvas(file){
+  if(/pdf$/i.test(file.name) || file.type === 'application/pdf'){
+    return need(CDN_PDFJS).then(function(){
+      var L = window.pdfjsLib;
+      L.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      return file.arrayBuffer()
+        .then(function(b){ return L.getDocument({data:b}).promise; })
+        .then(function(doc){ return doc.getPage(1); })
+        .then(function(pg){
+          var vp = pg.getViewport({scale:2});
+          var c = document.createElement('canvas');
+          c.width = vp.width; c.height = vp.height;
+          var x = c.getContext('2d');
+          x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+          return pg.render({canvasContext:x, viewport:vp}).promise.then(function(){ return c; });
+        });
+    });
+  }
+  return new Promise(function(res, rej){
+    var r = new FileReader();
+    r.onload = function(){
+      var im = new Image();
+      im.onload = function(){
+        /* upscale small screenshots — OCR is much better above ~1600px */
+        var sc = Math.min(3, Math.max(1, 1600 / im.naturalWidth));
+        var c = document.createElement('canvas');
+        c.width = Math.round(im.naturalWidth * sc);
+        c.height = Math.round(im.naturalHeight * sc);
+        var x = c.getContext('2d');
+        x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+        x.drawImage(im, 0, 0, c.width, c.height);
+        res(c);
+      };
+      im.onerror = rej; im.src = r.result;
+    };
+    r.onerror = rej; r.readAsDataURL(file);
+  });
+}
+function drawImpTable(){
+  var keys = Object.keys(impFound);
+  $('#impTable').innerHTML = keys.map(function(k){
+    return '<tr><td>' + esc(L(k)) + '</td>' +
+      '<td><input type="text" data-imp="' + k + '" value="' + esc(impFound[k]) + '"></td>' +
+      '<td style="width:34px"><input type="checkbox" data-impok="' + k + '" checked></td></tr>';
+  }).join('');
+  $('#impResult').hidden = false;
+}
+dropzone($('#impDz'), 'image/*,application/pdf,.pdf', function(files){
+  var f = files && files[0]; if(!f) return;
+  impSay('Loading the reader… the first time this takes a moment.');
+  Promise.all([impToCanvas(f), need(CDN_TESS)]).then(function(r){
+    var canvas = r[0];
+    impSay('Reading the page…');
+    return window.Tesseract.recognize(canvas, 'eng', {
+      logger:function(m){
+        if(m.status === 'recognizing text') impSay('Reading the page… ' + Math.round(m.progress * 100) + '%');
+      }
+    });
+  }).then(function(res){
+    impFound = parseBiodata((res && res.data && res.data.text) || '');
+    var n = Object.keys(impFound).length;
+    if(!n){
+      impSay('No labelled details could be read from that. A flat, well-lit picture of a printed biodata works best — or type the details in below.', true);
+      $('#impResult').hidden = true;
+      return;
+    }
+    impSay('Found ' + n + ' details. Check each one, untick anything wrong, then fill them in.');
+    drawImpTable();
+  }).catch(function(err){
+    console.error(err);
+    impSay('That file could not be read. Try a clearer picture, or type the details in below.', true);
+  });
+});
+$('#impTable').addEventListener('input', function(e){
+  if(e.target.dataset.imp) impFound[e.target.dataset.imp] = e.target.value;
+});
+$('#impApply').addEventListener('click', function(){
+  var used = 0;
+  $$('[data-impok]').forEach(function(cb){
+    if(!cb.checked) return;
+    var k = cb.dataset.impok;
+    if(FIELD_TYPE[k]) return;            /* dates need the picker, not OCR guesswork */
+    S.vals[k] = impFound[k]; used++;
+  });
+  $('#impResult').hidden = true;
+  impSay(used + ' details filled in. Dates and times were left for you to set with the picker.');
+  redrawAll();
+});
+$('#impCancel').addEventListener('click', function(){
+  impFound = null; $('#impResult').hidden = true; impSay('');
+});
+
+/* ── install as an app ──────────────────────────────────────────────────
+   Android fires beforeinstallprompt, so a real Install button can be shown.
+   iOS has no such event — Safari only offers Share → Add to Home Screen —
+   so iPhone users get told where to find it instead of a button that does
+   nothing. Both routes give a full-screen icon at no cost to anyone.
+   ──────────────────────────────────────────────────────────────────── */
+var deferredInstall = null;
+window.addEventListener('beforeinstallprompt', function(e){
+  e.preventDefault();
+  deferredInstall = e;
+  $('#installBtn').hidden = false;
+});
+$('#installBtn').addEventListener('click', function(){
+  if(!deferredInstall) return;
+  deferredInstall.prompt();
+  deferredInstall.userChoice.then(function(){ deferredInstall = null; $('#installBtn').hidden = true; });
+});
+window.addEventListener('appinstalled', function(){ $('#installBtn').hidden = true; });
+
+/* iOS: point at the actual route, once, and only if not already installed */
+(function(){
+  var P = window.__PLATFORM__ || {};
+  var standalone = window.navigator.standalone === true ||
+    (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
+  if(!P.ios || standalone) return;
+  try{ if(localStorage.getItem('biodata:iosTip') === '1') return; }catch(e){}
+  var b = $('#installBtn');
+  b.hidden = false;
+  b.textContent = 'Add to Home Screen';
+  b.addEventListener('click', function(){
+    $('#msg').className = 'hint';
+    $('#msg').textContent = 'Tap the Share icon at the bottom of Safari, then choose "Add to Home Screen".';
+    try{ localStorage.setItem('biodata:iosTip', '1'); }catch(e){}
+    b.hidden = true;
+  });
+})();
+
+if('serviceWorker' in navigator && location.protocol === 'https:'){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('./sw.js').catch(function(){});
+  });
+}
+
+/* ── ambient tint ───────────────────────────────────────────────────────
+   The ask was "colour the site by the current weather". That needs the
+   visitor's location plus a weather API call — a permission prompt and an
+   outgoing request, on a site whose whole promise is that nothing leaves
+   the device. Time of day gives the same living-surface feeling using only
+   the clock already on the phone. Off by default; the button toggles it.
+   ──────────────────────────────────────────────────────────────────── */
+var TINTS = {
+  dawn:  { n:'Dawn',     paper:'#FAF7EF', soft:'#F0EBDC', gold:'#C9861F' },
+  day:   { n:'Daylight', paper:'#F6F7F3', soft:'#E8EEE7', gold:'#D08A1E' },
+  dusk:  { n:'Dusk',     paper:'#F8F4EF', soft:'#EDE5DB', gold:'#BE7328' },
+  night: { n:'Evening',  paper:'#F1F4F3', soft:'#E2E9E7', gold:'#8A7A3C' }
+};
+function tintNow(){
+  var h = new Date().getHours();
+  return h < 7 ? 'dawn' : h < 17 ? 'day' : h < 20 ? 'dusk' : 'night';
+}
+function applyTint(on){
+  var r = document.documentElement.style;
+  if(!on){ ['--paper','--soft','--gold'].forEach(function(v){ r.removeProperty(v); }); return; }
+  var t = TINTS[tintNow()];
+  r.setProperty('--paper', t.paper);
+  r.setProperty('--soft', t.soft);
+  r.setProperty('--gold', t.gold);
+  return t;
+}
+try{ if(localStorage.getItem('biodata:tint') === '1') applyTint(true); }catch(e){}
+$('#tintBtn').addEventListener('click', function(){
+  var on = document.documentElement.style.getPropertyValue('--paper') === '';
+  var t = applyTint(on);
+  try{ localStorage.setItem('biodata:tint', on ? '1' : '0'); }catch(e){}
+  this.title = on ? ('Ambient tint: ' + t.n) : 'Ambient tint off';
+});
+
+/* ── Google page translation ────────────────────────────────────────────
+   Loaded only when asked, because it is heavy and because Chrome already
+   offers translation natively. The biodata sheet is marked notranslate so
+   names, gotra and place names are never machine-mangled. Note this only
+   translates what is on screen — it does not create separate URLs, so the
+   twelve proper language pages remain the ones search engines see. */
+$('#gtBtn').addEventListener('click', function(){
+  var btn = this;
+  if(window.google && window.google.translate){
+    $('#google_translate_element').style.display = '';
+    btn.style.display = 'none';
+    return;
+  }
+  btn.disabled = true; btn.textContent = 'Loading…';
+  window.googleTranslateElementInit = function(){
+    try{
+      new window.google.translate.TranslateElement(
+        {pageLanguage:'en', autoDisplay:false}, 'google_translate_element');
+      $('#google_translate_element').style.display = '';
+      btn.style.display = 'none';
+    }catch(e){ btn.textContent = 'Translation unavailable'; }
+  };
+  var sc = document.createElement('script');
+  sc.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  sc.onerror = function(){
+    btn.disabled = false;
+    btn.textContent = 'Use your browser\u2019s translate';
+    btn.title = 'Google\u2019s widget is unavailable. In Chrome, right-click the page and choose Translate.';
+  };
+  document.head.appendChild(sc);
+});
+
+/* a language landing page sets this before the app boots */
+if(window.__LANG__ && LANG[window.__LANG__]) S.lang = window.__LANG__;
+$$('.lchip').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.l === S.lang); });
+window.addEventListener('resize', scalePreview);
+redrawAll();
+})();
+</script>
+</body>
+</html>
