@@ -14,6 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="Biodata">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;600&family=Noto+Sans:wght@400;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Karla:wght@400;500;600&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 /* Site palette: deep pine green + marigold amber on a cool ivory.
@@ -53,7 +54,7 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;letter-spacing:-.015
 .hero h1{font-size:clamp(31px,5.4vw,50px);line-height:1.08;margin-bottom:14px}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p{margin:0 auto;max-width:56ch;color:var(--muted);font-size:17px}
-.langbar{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:22px 0 6px}
+.langbar{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:22px 0 6px;min-height:38px}
 .lchip{border:0;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);padding:7px 14px;border-radius:99px;cursor:pointer;font-family:'Noto Sans',Karla,sans-serif;font-size:14px}
 .lchip:hover{box-shadow:inset 0 0 0 1px var(--gold)}
 .lchip[aria-pressed="true"]{background:var(--plum);color:#fff;box-shadow:none}
@@ -95,7 +96,7 @@ textarea{min-height:80px;resize:vertical}
 .th .nm{font-size:11px;padding:5px 3px;color:var(--muted)}
 
 /* preview */
-.pv{background:var(--soft);border-radius:var(--r);padding:12px;overflow:auto;box-shadow:var(--sh)}
+.pv{background:var(--soft);border-radius:var(--r);padding:12px;overflow:auto;box-shadow:var(--sh);min-height:200px}
 .pv-in{transform-origin:top left}
 .dl{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .fwrap .frow{display:flex;align-items:center;gap:6px;margin-bottom:5px}
@@ -121,7 +122,10 @@ textarea{min-height:80px;resize:vertical}
 .gal-wrap{padding:34px 0 8px;border-top:1px solid var(--line);margin-top:8px}
 .gal-h{font-family:Fraunces,serif;font-size:clamp(21px,3.4vw,29px);text-align:center;margin:0 0 6px}
 .gal-sub{text-align:center;color:var(--muted);margin:0 0 20px;font-size:15px}
-.gal{overflow:hidden;padding:4px 0 18px;position:relative}
+/* The 21 thumbnails render after first paint, so without a reserved height
+   everything below them lurches down as they arrive — which is what turns
+   Cumulative Layout Shift red. min-height holds the space from the start. */
+.gal{overflow:hidden;padding:4px 0 18px;position:relative;min-height:262px}
 .gal-track{display:flex;gap:14px;width:max-content;animation:marquee 90s linear infinite}
 .gal:hover .gal-track,.gal:focus-within .gal-track{animation-play-state:paused}
 @keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -141,6 +145,9 @@ textarea{min-height:80px;resize:vertical}
 .tpl .shot > div{transform:scale(.189);transform-origin:top left;pointer-events:none;
   position:absolute;top:0;left:0}
 .tpl .nm{display:block;font-family:Fraunces,serif;font-weight:700;font-size:13.5px;color:var(--plum);margin-top:8px}
+/* holds the exact shape of a card while the real ones are being drawn */
+.tpl-ghost .shot{background:var(--soft);box-shadow:none}
+.tpl-ghost{pointer-events:none}
 .gal-foot{text-align:center;color:var(--muted);font-size:13px;margin:0 0 26px}
 
 /* ads: clearly labelled, clearly separated, never mistaken for a feature */
@@ -241,7 +248,7 @@ html.touch #crop{width:100%;max-width:300px;height:auto;aspect-ratio:3/4}
     <h2 class="gal-h">Twenty-one designs, ready to use</h2>
     <p class="gal-sub">Every one is a live rendering, not a picture. Press any design to build your biodata with it.</p>
   </div>
-  <div class="gal" id="gal"></div>
+  <div class="gal" id="gal"><div class="gal-track" aria-hidden="true"><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span><span class="tpl tpl-ghost"><span class="shot"></span><span class="nm">&nbsp;</span></span></div></div>
   <p class="gal-foot">Hover to pause · press any design to use it</p>
   <div class="wrap" id="adTop"></div>
 </section>
@@ -302,6 +309,14 @@ html.touch #crop{width:100%;max-width:300px;height:auto;aspect-ratio:3/4}
             <option value="sans">Clean sans</option>
             <option value="mixed">Serif headings, sans body</option>
             <option value="mono">Typewriter</option>
+          </select></label>
+          <label class="f"><span>Honorific before the name</span><select id="prefix">
+            <option value="">None</option>
+            <option value="चि.">चि. — for the groom</option>
+            <option value="कु.">कु. — for the bride</option>
+            <option value="चि. सौ. कां.">चि. सौ. कां. — formal, for the bride</option>
+            <option value="श्री">श्री</option>
+            <option value="सौ.">सौ.</option>
           </select></label>
           <label class="f"><span>Name heading</span><select id="hstyle">
             <option value="plain">Plain, rule below</option>
@@ -503,7 +518,9 @@ function download(href,name){
 var FIELDS = [
   ['name','p'],['dob','p'],['tob','p'],['pob','p'],['height','p'],['weight','p'],
   ['blood','p'],['complexion','p'],['marital','p'],['diet','p'],['tongue','p'],['hobbies','p'],
-  ['religion','r'],['caste','r'],['subcaste','r'],['gotra','r'],['rashi','r'],['nakshatra','r'],['manglik','r'],
+  ['religion','r'],['caste','r'],['subcaste','r'],['kuli','r'],['gotra','r'],['kuldaivat','r'],
+  ['devak','r'],['mama','r'],['rashi','r'],['nakshatra','r'],['charan','r'],
+  ['nadi','r'],['gana','r'],['manglik','r'],
   ['education','e'],['occupation','e'],['company','e'],['income','e'],['workplace','e'],
   ['father','f'],['fatherocc','f'],['mother','f'],['motherocc','f'],['siblings','f'],['native','f'],['ftype','f'],
   ['person','c'],['phone','c'],['email','c'],['address','c']
@@ -511,6 +528,26 @@ var FIELDS = [
 var SECTIONS = ['p','r','e','f','c'];
 /* a calendar beats typing a date wrong, and a time picker beats "6.42 am" */
 var FIELD_TYPE = { dob:'date', tob:'time' };
+/* Offered as suggestions, not a fixed list — every one of these can still be
+   typed freely, which matters because the same field is used in twelve
+   languages and by families who word things differently. */
+var FIELD_OPTIONS = {
+  manglik:{ mr:['आहे','नाही','सौम्य'], hi:['है','नहीं','सौम्य'], en:['Yes','No','Mild'] },
+  nadi:{ mr:['आद्य','मध्य','अंत्य'], hi:['आद्य','मध्य','अंत्य'], en:['Aadi','Madhya','Antya'] },
+  gana:{ mr:['देव','मनुष्य','राक्षस'], hi:['देव','मनुष्य','राक्षस'], en:['Dev','Manushya','Rakshas'] },
+  charan:{ mr:['१','२','३','४'], hi:['१','२','३','४'], en:['1','2','3','4'] },
+  blood:{ en:['A+','A-','B+','B-','AB+','AB-','O+','O-'] },
+  diet:{ mr:['शाकाहारी','मांसाहारी','अंडाहारी'], hi:['शाकाहारी','मांसाहारी','अंडाहारी'],
+         en:['Vegetarian','Non-vegetarian','Eggetarian','Jain'] },
+  marital:{ mr:['अविवाहित','घटस्फोटित','विधुर'], hi:['अविवाहित','तलाकशुदा','विधुर'],
+            en:['Never married','Divorced','Widowed'] },
+  ftype:{ mr:['विभक्त कुटुंब','एकत्र कुटुंब'], hi:['एकल परिवार','संयुक्त परिवार'],
+          en:['Nuclear family','Joint family'] }
+};
+function optionsFor(k){
+  var o = FIELD_OPTIONS[k]; if(!o) return null;
+  return o[S.lang] || o.en || null;
+}
 /* Showing the shape you want is the cheapest way to get consistent input. */
 var PLACEHOLD = {
   name:'Aarav Sharma', pob:'Pune, Maharashtra', height:'5\' 10" (178 cm)', weight:'72 kg',
@@ -518,6 +555,8 @@ var PLACEHOLD = {
   tongue:'Marathi', hobbies:'Trekking, photography, cooking',
   religion:'Hindu', caste:'Brahmin', subcaste:'Deshastha', gotra:'Kashyap',
   rashi:'Simha', nakshatra:'Magha', manglik:'No',
+  kuldaivat:'Khandoba, Jejuri', devak:'Kalamb', mama:'Deshpande', kuli:'96 Kuli',
+  charan:'2', nadi:'Madhya', gana:'Dev',
   education:'B.E. Computer Science, COEP Pune', occupation:'Software Engineer',
   company:'Infosys Ltd.', income:'₹18 lakh per annum', workplace:'Pune',
   father:'Shri Rajesh Sharma', fatherocc:'Retired Bank Manager',
@@ -558,7 +597,9 @@ var LANG = {
     education:'Education',occupation:'Occupation',company:'Company',income:'Annual Income',workplace:'Work Location',
     father:"Father's Name",fatherocc:"Father's Occupation",mother:"Mother's Name",motherocc:"Mother's Occupation",
     siblings:'Siblings',native:'Native Place',ftype:'Family Type',
-    person:'Contact Person',phone:'Phone',email:'Email',address:'Address',about:'About Me',partner:'Partner Preferences'},
+    person:'Contact Person',phone:'Phone',email:'Email',address:'Address',about:'About Me',partner:'Partner Preferences',
+    kuldaivat:'Family Deity',devak:'Devak',mama:"Maternal Uncle's Surname",kuli:'Kuli',
+    charan:'Charan',nadi:'Nadi',gana:'Gana'},
   hi:{n:'हिन्दी',p:'व्यक्तिगत विवरण',r:'धार्मिक विवरण',e:'शिक्षा एवं व्यवसाय',f:'पारिवारिक विवरण',c:'संपर्क विवरण',
     name:'नाम',dob:'जन्म तिथि',tob:'जन्म समय',pob:'जन्म स्थान',height:'कद',weight:'वजन',
     blood:'रक्त समूह',complexion:'रंग',marital:'वैवाहिक स्थिति',diet:'आहार',tongue:'मातृभाषा',hobbies:'रुचियाँ',
@@ -566,7 +607,9 @@ var LANG = {
     education:'शिक्षा',occupation:'व्यवसाय',company:'कंपनी',income:'वार्षिक आय',workplace:'कार्यस्थल',
     father:'पिता का नाम',fatherocc:'पिता का व्यवसाय',mother:'माता का नाम',motherocc:'माता का व्यवसाय',
     siblings:'भाई / बहन',native:'मूल निवास',ftype:'परिवार का प्रकार',
-    person:'संपर्क व्यक्ति',phone:'दूरभाष',email:'ईमेल',address:'पता',about:'मेरे बारे में',partner:'जीवनसाथी की अपेक्षाएँ'},
+    person:'संपर्क व्यक्ति',phone:'दूरभाष',email:'ईमेल',address:'पता',about:'मेरे बारे में',partner:'जीवनसाथी की अपेक्षाएँ',
+    kuldaivat:'कुलदेवता',devak:'देवक',mama:'मामा का उपनाम',kuli:'कुल',
+    charan:'चरण',nadi:'नाडी',gana:'गण'},
   mr:{n:'मराठी',p:'वैयक्तिक माहिती',r:'धार्मिक माहिती',e:'शिक्षण व व्यवसाय',f:'कौटुंबिक माहिती',c:'संपर्क माहिती',
     name:'नाव',dob:'जन्म तारीख',tob:'जन्म वेळ',pob:'जन्म ठिकाण',height:'उंची',weight:'वजन',
     blood:'रक्तगट',complexion:'वर्ण',marital:'वैवाहिक स्थिती',diet:'आहार',tongue:'मातृभाषा',hobbies:'छंद',
@@ -574,7 +617,9 @@ var LANG = {
     education:'शिक्षण',occupation:'व्यवसाय',company:'कंपनी',income:'वार्षिक उत्पन्न',workplace:'कार्यस्थळ',
     father:'वडिलांचे नाव',fatherocc:'वडिलांचा व्यवसाय',mother:'आईचे नाव',motherocc:'आईचा व्यवसाय',
     siblings:'भाऊ / बहीण',native:'मूळ गाव',ftype:'कुटुंब प्रकार',
-    person:'संपर्क व्यक्ती',phone:'दूरध्वनी',email:'ईमेल',address:'पत्ता',about:'माझ्याबद्दल',partner:'जोडीदाराबाबत अपेक्षा'},
+    person:'संपर्क व्यक्ती',phone:'दूरध्वनी',email:'ईमेल',address:'पत्ता',about:'माझ्याबद्दल',partner:'जोडीदाराबाबत अपेक्षा',
+    kuldaivat:'कुलदैवत',devak:'देवक',mama:'मामाचे आडनाव',kuli:'कुळी',
+    charan:'चरण',nadi:'नाडी',gana:'गण'},
   gu:{n:'ગુજરાતી',p:'વ્યક્તિગત વિગતો',r:'ધાર્મિક વિગતો',e:'શિક્ષણ અને વ્યવસાય',f:'કૌટુંબિક વિગતો',c:'સંપર્ક વિગતો',
     name:'નામ',dob:'જન્મ તારીખ',tob:'જન્મ સમય',pob:'જન્મ સ્થળ',height:'ઊંચાઈ',weight:'વજન',
     blood:'રક્ત જૂથ',complexion:'વર્ણ',marital:'વૈવાહિક સ્થિતિ',diet:'આહાર',tongue:'માતૃભાષા',hobbies:'શોખ',
@@ -878,7 +923,62 @@ var TR_DICT = {
   brahmin:'ब्राह्मण', maratha:'मराठा', engineer:'इंजिनियर', doctor:'डॉक्टर',
   teacher:'शिक्षक', manager:'मॅनेजर', accountant:'अकाउंटंट', business:'व्यवसाय',
   vegetarian:'शाकाहारी', married:'विवाहित', unmarried:'अविवाहित',
-  shri:'श्री', smt:'सौ', kum:'कु'
+  shri:'श्री', smt:'सौ', kum:'कु',
+
+  /* ── job titles: these are borrowed words with settled spellings.
+     Spelled out phonetically they come out as सोफ्त्वरे इंजिनियर, which
+     nobody writes. ── */
+  software:'सॉफ्टवेअर', engineer:'इंजिनिअर', developer:'डेव्हलपर',
+  manager:'मॅनेजर', consultant:'कन्सल्टंट', analyst:'ॲनालिस्ट',
+  architect:'आर्किटेक्ट', designer:'डिझायनर', scientist:'शास्त्रज्ञ',
+  professor:'प्राध्यापक', lecturer:'व्याख्याता', principal:'मुख्याध्यापक',
+  advocate:'वकील', lawyer:'वकील', banker:'बँकर', officer:'अधिकारी',
+  clerk:'लिपिक', nurse:'परिचारिका', pharmacist:'औषधनिर्माता',
+  dentist:'दंतवैद्य', surgeon:'शल्यचिकित्सक', architecture:'वास्तुकला',
+  homemaker:'गृहिणी', housewife:'गृहिणी', retired:'निवृत्त',
+  farmer:'शेतकरी', contractor:'कंत्राटदार', shopkeeper:'दुकानदार',
+  entrepreneur:'उद्योजक', executive:'कार्यकारी', assistant:'सहाय्यक',
+  senior:'वरिष्ठ', junior:'कनिष्ठ', head:'प्रमुख', director:'संचालक',
+  government:'शासकीय', private:'खाजगी', selfemployed:'स्वयंरोजगार',
+
+  /* ── qualifications ── */
+  bachelor:'पदवीधर', master:'पदव्युत्तर', diploma:'पदविका',
+  graduate:'पदवीधर', postgraduate:'पदव्युत्तर', engineering:'अभियांत्रिकी',
+  commerce:'वाणिज्य', science:'विज्ञान', arts:'कला', computer:'संगणक',
+  mechanical:'यांत्रिकी', civil:'स्थापत्य', electrical:'विद्युत',
+  medicine:'वैद्यक', pharmacy:'औषधनिर्माण', management:'व्यवस्थापन',
+  education:'शिक्षण', university:'विद्यापीठ', college:'महाविद्यालय',
+  school:'शाळा', institute:'संस्था',
+
+  /* ── values people type into these fields ── */
+  vegetarian:'शाकाहारी', nonvegetarian:'मांसाहारी', eggetarian:'अंडाहारी',
+  vegan:'शुद्ध शाकाहारी', occasionally:'कधीकधी',
+  married:'विवाहित', unmarried:'अविवाहित', never:'कधीही', divorced:'घटस्फोटित',
+  widowed:'विधुर', single:'अविवाहित',
+  fair:'गोरा', wheatish:'गव्हाळ', dark:'सावळा', medium:'मध्यम',
+  nuclear:'विभक्त', joint:'एकत्र', family:'कुटुंब', traditional:'पारंपरिक',
+  moderate:'मध्यम', liberal:'उदार',
+  yes:'होय', no:'नाही', none:'नाही', years:'वर्षे', year:'वर्ष',
+  month:'महिना', per:'दर', annum:'वर्ष', lakh:'लाख', crore:'कोटी',
+  brother:'भाऊ', sister:'बहीण', brothers:'भाऊ', sisters:'बहिणी',
+  elder:'मोठा', younger:'लहान', one:'एक', two:'दोन', three:'तीन',
+  studying:'शिकत आहे', working:'नोकरी करत आहे',
+  father:'वडील', mother:'आई', son:'मुलगा', daughter:'मुलगी',
+
+  /* ── more Maharashtra and India place names ── */
+  maharashtra:'महाराष्ट्र', gujarat:'गुजरात', karnataka:'कर्नाटक',
+  rajasthan:'राजस्थान', punjab:'पंजाब', kerala:'केरळ', goa:'गोवा',
+  india:'भारत', sangli:'सांगली', nanded:'नांदेड', jalgaon:'जळगाव',
+  ahmednagar:'अहमदनगर', ratnagiri:'रत्नागिरी', sindhudurg:'सिंधुदुर्ग',
+  chiplun:'चिपळूण', karad:'कराड', ichalkaranji:'इचलकरंजी', wardha:'वर्धा',
+  akola:'अकोला', dhule:'धुळे', beed:'बीड', osmanabad:'धाराशिव',
+  parbhani:'परभणी', jalna:'जालना', chandrapur:'चंद्रपूर',
+  vashi:'वाशी', kalyan:'कल्याण', dombivli:'डोंबिवली', panvel:'पनवेल',
+  chembur:'चेंबूर', bandra:'वांद्रे', shivajinagar:'शिवाजीनगर',
+  hadapsar:'हडपसर', wakad:'वाकड', hinjewadi:'हिंजवडी', baner:'बाणेर',
+  viman:'विमान', nagar:'नगर', road:'रोड', street:'रस्ता', flat:'फ्लॅट',
+  marathi:'मराठी', hindi:'हिंदी', english:'इंग्रजी', gujarati:'गुजराती',
+  konkani:'कोकणी', sanskrit:'संस्कृत'
 };
 
 var DEVA = {
@@ -890,7 +990,10 @@ var DEVA = {
         t:'त', th:'थ', d:'द', dh:'ध', n:'न',
         p:'प', ph:'फ', f:'फ', b:'ब', bh:'भ', m:'म',
         y:'य', r:'र', l:'ल', v:'व', w:'व',
-        sh:'श', ss:'ष', s:'स', h:'ह', ksh:'क्ष', gy:'ज्ञ', z:'ज़' },
+        sh:'श', ss:'ष', s:'स', h:'ह', ksh:'क्ष', gy:'ज्ञ', z:'ज़',
+        /* Without these, a bare c/q/x leaked through as a Latin letter and
+           produced things like "Cओम्पुतेर". Every consonant now maps. */
+        c:'क', q:'क', x:'क्स' },
   vir:'्', anu:'ं'
 };
 /* longest-first so "chh" beats "ch", "aa" beats "a" */
@@ -925,10 +1028,93 @@ function toScript(devaChar, lang){
   return out;
 }
 
+/* Some things only make sense as a phrase. Translating "Never married"
+   word by word gives "कधीही विवाहित", which reads as "ever married" —
+   the opposite of what it says. Phrases are matched before words. */
+var TR_PHRASE = {
+  'never married':'अविवाहित', 'not married':'अविवाहित',
+  'nuclear family':'विभक्त कुटुंब', 'joint family':'एकत्र कुटुंब',
+  'pure vegetarian':'शुद्ध शाकाहारी', 'non vegetarian':'मांसाहारी',
+  'per annum':'दर वर्षी', 'per month':'दर महिना', 'per year':'दर वर्षी',
+  'bank manager':'बँक मॅनेजर', 'software engineer':'सॉफ्टवेअर इंजिनिअर',
+  'civil engineer':'स्थापत्य अभियंता', 'mechanical engineer':'यांत्रिकी अभियंता',
+  'computer science':'संगणक विज्ञान', 'information technology':'माहिती तंत्रज्ञान',
+  'chartered accountant':'सनदी लेखापाल', 'government service':'शासकीय सेवा',
+  'private job':'खाजगी नोकरी', 'own business':'स्वतःचा व्यवसाय',
+  'family business':'कौटुंबिक व्यवसाय', 'house wife':'गृहिणी',
+  'younger sister':'लहान बहीण', 'elder sister':'मोठी बहीण',
+  'younger brother':'लहान भाऊ', 'elder brother':'मोठा भाऊ',
+  'classical music':'शास्त्रीय संगीत', 'listening to music':'संगीत ऐकणे',
+  'listening to classical music':'शास्त्रीय संगीत ऐकणे',
+  'running and jogging':'धावणे', 'fitness and gym':'व्यायाम / फिटनेस',
+  'painting and sketching':'चित्रकला', 'photography':'फोटोग्राफी / छायाचित्रण',
+  'traveling':'प्रवास / पर्यटन', 'travelling':'प्रवास / पर्यटन',
+  'cooking':'पाककला',
+  'listening to classical music':'शास्त्रीय संगीत ऐकणे',
+  'running / jogging':'धावणे', 'fitness / gym':'व्यायाम / फिटनेस',
+  'painting / sketching':'चित्रकला', 'photography / sketching':'छायाचित्रण',
+  'trying new recipes':'नवीन पदार्थ बनवणे',
+  'playing cricket':'क्रिकेट खेळणे', 'watching movies':'चित्रपट पाहणे',
+  'blood group':'रक्तगट', 'date of birth':'जन्म तारीख',
+  'place of birth':'जन्म ठिकाण', 'time of birth':'जन्म वेळ',
+  'native place':'मूळ गाव', 'mother tongue':'मातृभाषा'
+};
+/* the twelve rashis and a few common nakshatras, which are proper nouns
+   with settled spellings rather than sounds to be spelled out */
+var TR_ASTRO = {
+  mesh:'मेष', mesha:'मेष', vrishabh:'वृषभ', vrushabh:'वृषभ', mithun:'मिथुन',
+  kark:'कर्क', karka:'कर्क', simha:'सिंह', sinha:'सिंह', kanya:'कन्या',
+  tula:'तूळ', vrishchik:'वृश्चिक', vruschik:'वृश्चिक', dhanu:'धनू',
+  makar:'मकर', kumbh:'कुंभ', meen:'मीन', meena:'मीन',
+  magha:'मघा', ashwini:'अश्विनी', bharani:'भरणी', krittika:'कृत्तिका',
+  rohini:'रोहिणी', mrigashira:'मृगशीर्ष', ardra:'आर्द्रा', punarvasu:'पुनर्वसू',
+  pushya:'पुष्य', ashlesha:'आश्लेषा', chitra:'चित्रा', swati:'स्वाती',
+  vishakha:'विशाखा', anuradha:'अनुराधा', jyeshtha:'ज्येष्ठा', mula:'मूळ',
+  shravan:'श्रवण', dhanishta:'धनिष्ठा', revati:'रेवती',
+  kashyap:'कश्यप', bharadwaj:'भारद्वाज', vasishtha:'वसिष्ठ', gautam:'गौतम',
+  bank:'बँक', ltd:'लि', pvt:'प्रा', limited:'लिमिटेड',
+  /* the Marathi lineage vocabulary */
+  kuldaivat:'कुलदैवत', kuldevta:'कुलदैवत', devak:'देवक', kuli:'कुळी',
+  nadi:'नाडी', gana:'गण', charan:'चरण', aadi:'आद्य', madhya:'मध्य',
+  antya:'अंत्य', dev:'देव', manushya:'मनुष्य', rakshas:'राक्षस',
+  khandoba:'खंडोबा', jejuri:'जेजुरी', tuljapur:'तुळजापूर', bhavani:'भवानी',
+  vitthal:'विठ्ठल', pandharpur:'पंढरपूर', ekvira:'एकवीरा', renuka:'रेणुका',
+  mahalaxmi:'महालक्ष्मी', ambabai:'अंबाबाई', jyotiba:'ज्योतिबा',
+  saptashrungi:'सप्तश्रृंगी', kalubai:'काळूबाई', mhalsa:'म्हाळसा',
+  /* units — "72 kg" was coming out as "72 क्ग" */
+  kg:'किलो', kgs:'किलो', kilos:'किलो', cm:'सेमी', mm:'मिमी', ft:'फूट',
+  feet:'फूट', inch:'इंच', inches:'इंच', hrs:'तास', yrs:'वर्षे',
+  /* hobbies — the field people most often fill with English words */
+  trekking:'ट्रेकिंग', photography:'फोटोग्राफी', cooking:'पाककला',
+  reading:'वाचन', writing:'लेखन', painting:'चित्रकला', drawing:'चित्रकला',
+  sketching:'चित्रकला', singing:'गायन', dancing:'नृत्य', music:'संगीत',
+  classical:'शास्त्रीय', travelling:'प्रवास', traveling:'प्रवास',
+  gardening:'बागकाम', cycling:'सायकलिंग', swimming:'पोहणे', running:'धावणे',
+  jogging:'धावणे', fitness:'फिटनेस', driving:'ड्रायव्हिंग', yoga:'योग',
+  meditation:'ध्यान', cricket:'क्रिकेट', football:'फुटबॉल', chess:'बुद्धिबळ',
+  badminton:'बॅडमिंटन', movies:'चित्रपट', gym:'व्यायामशाळा',
+  sports:'खेळ', games:'खेळ', hiking:'भटकंती', blogging:'ब्लॉगिंग',
+  reading:'वाचन', trekking:'ट्रेकिंग', cycling:'सायकलिंग', jogging:'धावणे',
+  fitness:'फिटनेस', driving:'ड्रायव्हिंग', sketching:'रेखाटन',
+  volunteering:'स्वयंसेवा', temple:'मंदिर', tabla:'तबला', flute:'बासरी',
+  /* connectors — "and" became "अन्द", which is not a word */
+  and:'आणि', or:'किंवा', with:'सह', in:'मध्ये', at:'येथे', of:'चे',
+  the:'', a:'', an:'',
+  guitar:'गिटार', harmonium:'हार्मोनियम', veena:'वीणा'
+  ,
+  /* the employers that turn up most often, since letter-by-letter gives
+     इन्फोस्य्स rather than the spelling everyone actually uses */
+  infosys:'इन्फोसिस', wipro:'विप्रो', tcs:'टीसीएस', accenture:'ॲक्सेंचर',
+  cognizant:'कॉग्निझंट', capgemini:'कॅपजेमिनी', reliance:'रिलायन्स',
+  tata:'टाटा', mahindra:'महिंद्रा', bajaj:'बजाज', hdfc:'एचडीएफसी',
+  icici:'आयसीआयसीआय', sbi:'एसबीआय', lic:'एलआयसी'
+};
+
 /* one word at a time */
 function translitWord(word, lang){
   if(!word) return word;
-  var hit = TR_DICT[word.toLowerCase()];
+  var lw = word.toLowerCase();
+  var hit = TR_ASTRO[lw] || TR_DICT[lw];
   if(hit) return toScript(hit, lang);
   var s = word.toLowerCase(), out = '', i = 0, lastWasCon = false;
   function push(ch){ out += toScript(ch, lang); }
@@ -969,10 +1155,30 @@ function translitWord(word, lang){
   return out;
 }
 
+/* Things that must never be spelled out phonetically. An email rendered as
+   शर्मा.फमिल्य@एxअम्प्ले.cओम is not a translation, it is a broken address. */
+function isUntouchable(tok){
+  return /[@]/.test(tok) ||
+         /^(https?:|www\.)/i.test(tok) ||
+         /\.(com|in|org|net|co)\b/i.test(tok) ||
+         /^[A-Z]{2,}$/.test(tok) ||        /* B.E., COEP, CTC — initialisms */
+         /^[A-Za-z]\+$/.test(tok) ||       /* blood groups: B+, O- */
+         /^[A-Za-z]$/.test(tok);           /* a lone letter is an initial */
+}
 function transliterate(text, lang){
   if(!text || !SCRIPT_BASE[lang]) return text;
-  /* leave anything already in a non-Latin script, and digits/punctuation, alone */
-  return text.replace(/[A-Za-z]+/g, function(w){ return translitWord(w, lang); });
+  /* phrases first, longest ones before shorter ones */
+  var keys = Object.keys(TR_PHRASE).sort(function(a,b){ return b.length - a.length; });
+  keys.forEach(function(ph){
+    var re = new RegExp('\\b' + ph.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '[\\s-]+') + '\\b', 'gi');
+    text = String(text).replace(re, function(){ return toScript(TR_PHRASE[ph], lang); });
+  });
+  /* split on whitespace so whole tokens can be judged, not just letter runs */
+  return String(text).split(/(\s+)/).map(function(tok){
+    if(!tok.trim()) return tok;
+    if(isUntouchable(tok)) return tok;
+    return tok.replace(/[A-Za-z]+/g, function(w){ return translitWord(w, lang); });
+  }).join('');
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -1000,7 +1206,7 @@ function transliterate(text, lang){
    site stays true. Get a token free at:
        dash.cloudflare.com → Analytics & Logs → Web Analytics → Add a site
    ══════════════════════════════════════════════════════════════════════ */
-var ANALYTICS_TOKEN = '32ef30bf570e48a2a165e82300d0e103';
+var ANALYTICS_TOKEN = '';
 if(ANALYTICS_TOKEN){
   var an = document.createElement('script');
   an.defer = true;
@@ -1077,7 +1283,7 @@ var S = { lang:'en', theme:'gold', head:0, fmt:'in', pshape:'12px', ppos:'right'
           motif:'none', mopacity:10, bgimg:'', border:'double',
           photoRaw:'', crop:{x:0,y:0,z:100},
           layout:'single', density:'normal', font:'serif', hstyle:'plain', zoom:'fit',
-          order:null, removed:{}, symbol:'none',
+          order:null, removed:{}, symbol:'none', prefix:'',
           vals:{}, labels:{}, custom:[], photo:'', about:'', partner:'', step:'p' };
 
 function initOrder(){
@@ -1162,7 +1368,12 @@ function drawForm(){
           '</span>' +
         '</span>' +
         '<input type="'+(FIELD_TYPE[k]||'text')+'" data-k="'+k+'" value="'+esc(S.vals[k]||'')+
-          '" placeholder="'+esc(PLACEHOLD[k]||'')+'"></div>';
+          '" placeholder="'+esc(PLACEHOLD[k]||'')+'"' +
+          (optionsFor(k) ? ' list="dl-'+k+'"' : '') + '>' +
+        (optionsFor(k) ? '<datalist id="dl-'+k+'">' +
+          optionsFor(k).map(function(o){ return '<option value="'+esc(o)+'">'; }).join('') +
+          '</datalist>' : '') +
+        '</div>';
     }).join('') + '</div>';
     var gone = S.order[S.step].filter(function(k){ return S.removed[k]; });
     if(gone.length){
@@ -1184,18 +1395,23 @@ function drawTrBar(){
   bar.innerHTML =
     '<button class="btn ghost sm" id="trGo">Convert my typing to ' + esc(LANG[S.lang].n) + '</button>' +
     (trBackup ? '<button class="btn ghost sm" id="trUndo">Undo conversion</button>' : '') +
-    '<span class="hint" style="align-self:center;margin:0">Type in English letters and press this. Always read the result — romanised spellings are a best guess.</span>';
+    '<span class="hint" style="align-self:center;margin:0">Names, places and common words are converted. Email, phone and dates are left alone, and the two paragraphs are left for you to write in ' +
+    esc(LANG[S.lang].n) + ' — a sentence spelled out letter by letter is not readable. Always check the result.</span>';
 }
+/* Fields that hold prose, an address, or an address-like string. Running a
+   whole English sentence through a phonetic converter gives you
+   "एअस्य-गोइङ, फमिल्य-ओऋएन्तेद" — letters, not language. These are left for
+   the writer, and the UI says so. */
+var NO_TRANSLIT = { email:1, phone:1 };
 function runTranslit(){
   trBackup = { vals:Object.assign({}, S.vals), about:S.about, partner:S.partner,
                custom:S.custom.map(function(c){ return {label:c.label, value:c.value}; }) };
   Object.keys(S.vals).forEach(function(k){
-    if(FIELD_TYPE[k]) return;                  /* never touch dates or times */
+    if(FIELD_TYPE[k] || NO_TRANSLIT[k]) return;   /* dates, times, email, phone */
     S.vals[k] = transliterate(S.vals[k], S.lang);
   });
-  S.about = transliterate(S.about, S.lang);
-  S.partner = transliterate(S.partner, S.lang);
   S.custom.forEach(function(c){ c.value = transliterate(c.value, S.lang); });
+  /* About Me and Partner Preferences are deliberately untouched */
 }
 function undoTranslit(){
   if(!trBackup) return;
@@ -1330,8 +1546,13 @@ function sheetMarkup(){
 
   var nameSize = d.name, head = '';
   var hasName = !!(S.vals.name || '').trim();
+  /* चि. / कु. / चि. सौ. कां. sit before the name at a smaller size, the way
+     they are printed on a traditional sheet — not as part of the name */
+  var pfx = (S.prefix || '').trim();
   var nameBlock = (hasName
       ? '<div style="font-family:'+t.hd+';font-size:'+nameSize+'px;font-weight:700;line-height:1.2">' +
+        (pfx ? '<span style="font-size:'+Math.round(nameSize*0.55)+'px;font-weight:600;opacity:.85">' +
+          esc(pfx) + ' </span>' : '') +
         esc(S.vals.name) + '</div>' : '') +
       (S.vals.occupation?'<div style="font-size:'+(d.fs+0.5)+'px;color:'+t.ac+';margin-top:3px">'+esc(S.vals.occupation)+'</div>':'');
 
@@ -1397,8 +1618,7 @@ function checkMixed(){
   if(total < 2 || latin < Math.max(2, total * 0.4)){ w.hidden = true; return; }
   w.hidden = false;
   w.innerHTML = '<b>Your labels are in ' + esc(LANG[S.lang].n) + ', but your details are still in English.</b>' +
-    'That is a normal choice — many families keep names in English. If you would rather have everything in ' +
-    esc(LANG[S.lang].n) + ', convert them here.' +
+    'That is a normal choice — many families keep names in English. If you would rather convert them, names, places and common words will be changed; email, phone, dates and your two written paragraphs are left alone.' +
     '<button class="btn ghost sm" id="mixGo">Convert details to ' + esc(LANG[S.lang].n) + '</button>' +
     (trBackup ? ' <button class="btn ghost sm" id="mixUndo">Undo</button>' : '');
 }
@@ -1597,7 +1817,7 @@ $('#bgimg').addEventListener('change', function(){
 });
 $('#bgclear').addEventListener('click', function(){ S.bgimg = ''; $('#bgimg').value = ''; draw(); });
 
-['#layout','#density','#font','#hstyle'].forEach(function(sel){
+['#layout','#density','#font','#hstyle','#prefix'].forEach(function(sel){
   $(sel).addEventListener('change', function(){ S[sel.slice(1)] = this.value; draw(); });
 });
 document.addEventListener('click', function(e){
@@ -1768,7 +1988,7 @@ $('#restore').addEventListener('click', function(){
     $$('.th').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.t === S.theme); });
     $('#head').value = S.head; $('#pshape').value = S.pshape; $('#ppos').value = S.ppos; $('#fmt').value = S.fmt;
     $('#mopacity').value = S.mopacity; $('#mov').textContent = S.mopacity;
-    ['layout','density','font','hstyle'].forEach(function(k){
+    ['layout','density','font','hstyle','prefix'].forEach(function(k){
       if(S[k] && $('#'+k)) $('#'+k).value = S[k];
     });
     if(S.mplace) $('#mplace').value = S.mplace;
